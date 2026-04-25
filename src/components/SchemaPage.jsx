@@ -186,11 +186,11 @@ const calculateSectionStatus = (sectionKey, formData) => {
     let definition = sectionSchema;
     if (sectionSchema.$ref) definition = resolveRef(sectionSchema.$ref) || sectionSchema;
     else if (sectionSchema.allOf) {
-         const refItem = sectionSchema.allOf.find(i => i.$ref);
-         if (refItem) definition = resolveRef(refItem.$ref) || sectionSchema;
-    } else if (sectionSchema.anyOf) {
-         const validOption = sectionSchema.anyOf.find(i => i.type !== 'null');
-         if (validOption) definition = (validOption.$ref ? resolveRef(validOption.$ref) : validOption) || sectionSchema;
+            const refItem = sectionSchema.allOf.find(i => i.$ref);
+            if (refItem) definition = resolveRef(refItem.$ref) || sectionSchema;
+        } else if (sectionSchema.anyOf) {
+            const validOption = sectionSchema.anyOf.find(i => i.type !== 'null');
+            if (validOption) definition = (validOption.$ref ? resolveRef(validOption.$ref) : validOption) || sectionSchema;
     }
 
     // Array Types
@@ -586,7 +586,7 @@ const FieldRenderer = ({
         // 1. Helper to resolve a Reference
         const resolve = (obj) => {
             if (obj && obj.$ref && typeof obj.$ref === 'string') {
-                 return resolveRef(obj.$ref);
+                    return resolveRef(obj.$ref);
             }
             return obj;
         };
@@ -765,9 +765,9 @@ const FieldRenderer = ({
                     </h3>
                     <div className="text-gray-400 group-hover:text-indigo-500 transition-colors">
                         {isExpanded ? (
-                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                         ) : (
-                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
                         )}
                     </div>
                 </div>
@@ -1473,21 +1473,45 @@ const handleFinalSubmit = (currentSection, currentAnswers) => {
         // 4. Update Timestamps
         processedData.modified = new Date().toISOString();
 
-        // 5. Generate and trigger download
-        const fileData = JSON.stringify(processedData, null, 2);
-        const blob = new Blob([fileData], { type: "application/json" });
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-
+        // 5. Send JSON to Python mapping API, then download mapped result
         const fileName = processedData.summary?.title
             ? `${processedData.summary.title.replace(/\s+/g, '_')}_metadata.json`
             : "dataset_metadata.json";
 
-        link.download = fileName;
-        link.href = url;
-        link.click();
+        fetch("http://127.0.0.1:5000/run-mapping", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(processedData)
+        })
+        
+        .then(async response => {
+        const text = await response.text();
+        console.log("Mapping raw response:", text);
 
-        URL.revokeObjectURL(url);
+        if (!response.ok) {
+            throw new Error(text);
+        }
+
+        return JSON.parse(text);
+    })
+    .then(mappedData => {
+                const fileData = JSON.stringify(mappedData, null, 2);
+                const blob = new Blob([fileData], { type: "application/json" });
+                const url = URL.createObjectURL(blob);
+                const link = document.createElement("a");
+
+                link.download = fileName;
+                link.href = url;
+                link.click();
+
+                URL.revokeObjectURL(url);
+            })
+            .catch(error => {
+                console.error("Mapping error:", error);
+                alert("Failed to run Python mapping.");
+            });
     };
 
 return (
