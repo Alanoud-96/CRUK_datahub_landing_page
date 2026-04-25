@@ -1,0 +1,959 @@
+    {
+    "schema_version": "1.1.2",
+    "mapping_level": "complex",
+    "match_priority_order": [
+        "topography_and_histology",
+        "topography_group_and_histology",
+        "topography_exact",
+        "topography_group",
+        "histology_exact"
+    ],
+
+    "mapping_groups": {
+        "histology_driven": [
+        "DLBC",
+        "LAML",
+        "ALL",
+        "CLL",
+        "CML",
+        "CMML",
+        "JMML",
+        "HCL",
+        "ET",
+        "PV",
+        "PMF",
+        "MDS",
+        "MYELOMA",
+        "MESO",
+        "SARC",
+        "CARCINOID",
+        "NEUROENDOCRINE",
+        "SIGNET"
+        ],
+        "umbrella_or_special": [
+        "SKCM",
+        "NON_MELANOMA_SKIN",
+        "UVM",
+        "HNSC",
+        "EAR",
+        "SPINAL_CORD",
+        "BONE",
+        "ADRENAL",
+        "GASTRO_OESOPHAGEAL_JUNCTION",
+        "MOUTH_OROPHARYNGEAL",
+        "NASAL_PARANASAL_SINUS",
+        "UPPER_URINARY_TRACT_UROTHELIAL",
+        "MEDIASTINAL_GERM_CELL"
+        ],
+        "multi_site_or_overlap": [
+        "PCPG",
+        "CHOL"
+        ]
+    },
+
+    "histology_driven_mappings": {
+        "LAML": {
+        "description": "Acute myeloid leukaemia is mapped by histology alone (9861/3). Topography is not used because AML is a haematological malignancy with no meaningful solid organ site. Other myeloid neoplasms such as CML (9875/3) are intentionally excluded.",
+        "rules": [
+            {
+            "rule_name": "aml_exact",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "9861/3"
+            ],
+            "cruk": [
+                "Acute myeloid leukaemia (AML)"
+            ],
+            "tcga": [
+                "LAML (Acute Myeloid Leukemia)"
+            ]
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Leukaemia"
+            ],
+            "tcga": []
+        }
+        },
+
+        "ALL": {
+        "description": "Acute lymphoblastic leukaemia is mapped by histology alone because it is a haematological malignancy rather than a solid-organ tumour. This rule includes current B-ALL coding and legacy ALL coding where present.",
+        "rules": [
+            {
+            "rule_name": "all_exact",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "9811/3",
+                "9835/3"
+            ],
+            "cruk": [
+                "Acute lymphoblastic leukaemia (ALL)"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Leukaemia"
+            ],
+            "tcga": []
+        }
+        },
+
+        "CLL": {
+        "description": "Chronic lymphocytic leukaemia is mapped by histology alone because it is a haematological malignancy with no meaningful solid-organ site.",
+        "rules": [
+            {
+            "rule_name": "cll_exact",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "9823/3"
+            ],
+            "cruk": [
+                "Chronic lymphocytic leukaemia (CLL)"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Leukaemia"
+            ],
+            "tcga": []
+        }
+        },
+
+        "CML": {
+        "description": "Chronic myeloid leukaemia is mapped by histology alone. Includes both the NOS and BCR::ABL1-positive forms where coded separately.",
+        "rules": [
+            {
+            "rule_name": "cml_exact",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "9863/3",
+                "9875/3"
+            ],
+            "cruk": [
+                "Chronic myeloid leukaemia (CML)"
+            ],
+            "tcga": [
+                "LCML (Chronic Myelogenous Leukemia)"
+            ]
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Leukaemia"
+            ],
+            "tcga": []
+        }
+        },
+
+        "CMML": {
+        "description": "Chronic myelomonocytic leukaemia is mapped by histology alone because it is a bone marrow/blood malignancy rather than a site-defined solid tumour.",
+        "rules": [
+            {
+            "rule_name": "cmml_exact",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "9945/3"
+            ],
+            "cruk": [
+                "Chronic myelomonocytic leukaemia (CMML)"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Leukaemia"
+            ],
+            "tcga": []
+        }
+        },
+
+        "JMML": {
+        "description": "Juvenile myelomonocytic leukaemia is mapped by histology alone as a haematological malignancy.",
+        "rules": [
+            {
+            "rule_name": "jmml_exact",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "9946/3"
+            ],
+            "cruk": [
+                "Juvenile myelomonocytic leukaemia (JMML)"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Leukaemia"
+            ],
+            "tcga": []
+        }
+        },
+
+        "HCL": {
+        "description": "Hairy cell leukaemia is mapped by histology alone as a haematological malignancy.",
+        "rules": [
+            {
+            "rule_name": "hcl_exact",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "9940/3"
+            ],
+            "cruk": [
+                "Hairy cell leukaemia"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Leukaemia"
+            ],
+            "tcga": []
+        }
+        },
+
+        "ET": {
+        "description": "Essential thrombocythaemia is mapped by histology alone as a myeloproliferative neoplasm of bone marrow/blood.",
+        "rules": [
+            {
+            "rule_name": "et_exact",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "9962/3"
+            ],
+            "cruk": [
+                "Essential Thrombocythaemia (ET)"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Blood cancer"
+            ],
+            "tcga": []
+        }
+        },
+
+        "PV": {
+        "description": "Polycythaemia vera is mapped by histology alone as a myeloproliferative neoplasm of bone marrow/blood.",
+        "rules": [
+            {
+            "rule_name": "pv_exact",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "9950/3"
+            ],
+            "cruk": [
+                "Polycythaemia vera (PV)"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Blood cancer"
+            ],
+            "tcga": []
+        }
+        },
+
+        "PMF": {
+        "description": "Primary myelofibrosis is mapped by histology alone as a myeloproliferative neoplasm of bone marrow/blood.",
+        "rules": [
+            {
+            "rule_name": "pmf_exact",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "9961/3"
+            ],
+            "cruk": [
+                "Myelofibrosis"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Blood cancer"
+            ],
+            "tcga": []
+        }
+        },
+
+        "MDS": {
+        "description": "Myelodysplastic syndromes are mapped by histology alone. This conservative version currently includes the NOS/unclassifiable MDS code only.",
+        "rules": [
+            {
+            "rule_name": "mds_exact",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "9989/3"
+            ],
+            "cruk": [
+                "Myelodysplastic syndromes (MDS)"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Blood cancer"
+            ],
+            "tcga": []
+        }
+        },
+
+        "MYELOMA": {
+        "description": "Myeloma is mapped by histology alone because plasma cell myeloma is a haematological malignancy of bone marrow.",
+        "rules": [
+            {
+            "rule_name": "myeloma_exact",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "9732/3"
+            ],
+            "cruk": [
+                "Myeloma"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Blood cancer"
+            ],
+            "tcga": []
+        }
+        },
+
+        "DLBC": {
+        "description": "Diffuse large B-cell lymphoma is mapped by histology alone (9680/3), independent of anatomical site. Other large B-cell subtypes such as primary mediastinal B-cell lymphoma (9679/3) are intentionally excluded and will fall through to the fallback.",
+        "rules": [
+            {
+            "rule_name": "dlbc_exact",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "9680/3"
+            ],
+            "cruk": [
+                "Non-Hodgkin lymphoma"
+            ],
+            "tcga": [
+                "DLBC (Lymphoid Neoplasm Diffuse Large B-cell Lymphoma)"
+            ]
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Lymphoma"
+            ],
+            "tcga": []
+        }
+        },
+
+        "MESO": {
+        "description": "Mesothelioma is mapped by histology alone, as it can arise from pleural, peritoneal, or pericardial surfaces. Covers epithelioid (9050/3), biphasic (9052/3), and sarcomatoid (9053/3) variants. Fibrous mesothelioma (9051/3) is not currently included and should be reviewed for addition.",
+        "rules": [
+            {
+            "rule_name": "mesothelioma_exact",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "9050/3",
+                "9052/3",
+                "9053/3"
+            ],
+            "cruk": [
+                "Mesothelioma"
+            ],
+            "tcga": [
+                "MESO (Mesothelioma)"
+            ]
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Mesothelioma"
+            ],
+            "tcga": []
+        }
+        },
+
+        "SARC": {
+        "description": "Sarcomas are mapped by histology family, as they span multiple anatomical sites. Covers generic soft tissue sarcoma codes, leiomyosarcoma, liposarcoma subtypes, rhabdomyosarcoma, synovial sarcoma, epithelioid sarcoma, alveolar soft part sarcoma, and clear cell sarcoma. Bone sarcomas are intentionally excluded here as they are handled in the rare schema by histology. GIST is also excluded because it is handled in the rare schema and does not have a matching CRUK label in the current label dictionary.",
+        "rules": [
+            {
+            "rule_name": "sarcoma_generic",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "8800/3",
+                "8801/3",
+                "8802/3",
+                "8804/3"
+            ],
+            "cruk": ["Soft tissue sarcoma"],
+            "tcga": ["SARC (Sarcoma)"]
+            },
+            {
+            "rule_name": "leiomyosarcoma",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "8890/3",
+                "8891/3",
+                "8892/3",
+                "8893/3",
+                "8894/3",
+                "8895/3",
+                "8896/3"
+            ],
+            "cruk": ["Soft tissue sarcoma"],
+            "tcga": ["SARC (Sarcoma)"]
+            },
+            {
+            "rule_name": "liposarcoma",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "8850/3",
+                "8851/3",
+                "8852/3",
+                "8853/3",
+                "8854/3",
+                "8855/3",
+                "8857/3",
+                "8858/3"
+            ],
+            "cruk": ["Soft tissue sarcoma"],
+            "tcga": ["SARC (Sarcoma)"]
+            },
+            {
+            "rule_name": "rhabdomyosarcoma",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "8900/3",
+                "8901/3",
+                "8902/3",
+                "8910/3",
+                "8912/3",
+                "8920/3",
+                "8991/3"
+            ],
+            "cruk": ["Soft tissue sarcoma"],
+            "tcga": ["SARC (Sarcoma)"]
+            },
+            {
+            "rule_name": "synovial_sarcoma",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "9040/3",
+                "9041/3",
+                "9042/3",
+                "9043/3"
+            ],
+            "cruk": ["Soft tissue sarcoma"],
+            "tcga": ["SARC (Sarcoma)"]
+            },
+            {
+            "rule_name": "epithelioid_and_clear_cell_sarcoma",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "8804/3",
+                "9044/3"
+            ],
+            "cruk": ["Soft tissue sarcoma"],
+            "tcga": ["SARC (Sarcoma)"]
+            },
+            {
+            "rule_name": "alveolar_soft_part_sarcoma",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "9581/3"
+            ],
+            "cruk": ["Soft tissue sarcoma"],
+            "tcga": ["SARC (Sarcoma)"]
+            }
+        ],
+        "fallback": {
+            "cruk": ["Soft tissue sarcoma"],
+            "tcga": []
+        }
+        },
+
+        "NEUROENDOCRINE": {
+        "description": "Neuroendocrine tumours are mapped by representative malignant neuroendocrine histology codes across sites.",
+        "rules": [
+            {
+            "rule_name": "neuroendocrine_family",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "8240/3",
+                "8246/3",
+                "8249/3"
+            ],
+            "cruk": [
+                "Neuroendocrine tumours"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Neuroendocrine tumours"
+            ],
+            "tcga": []
+        }
+        },
+
+        "SIGNET": {
+        "description": "Signet cell cancer is mapped by signet-ring cell histology across anatomical sites.",
+        "rules": [
+            {
+            "rule_name": "signet_cell_exact",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "8490/3"
+            ],
+            "cruk": [
+                "Signet cell cancer"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Signet cell cancer"
+            ],
+            "tcga": []
+        }
+        }
+    },
+
+    "umbrella_or_special_mappings": {
+        "SKCM": {
+        "description": "Cutaneous melanoma requires both topography (C44 Skin) and histology to be matched. This prevents melanomas arising at non-cutaneous sites — such as mucosal or uveal melanoma — from being incorrectly mapped here, even when the histology code overlaps.",
+        "rules": [
+            {
+            "rule_name": "skin_melanoma",
+            "match_type": "topography_and_histology",
+            "topography": [
+                "C44 Skin"
+            ],
+            "histology_codes": [
+                "8720/3",
+                "8721/3",
+                "8742/3",
+                "8744/3"
+            ],
+            "cruk": [
+                "Melanoma skin cancer"
+            ],
+            "tcga": [
+                "SKCM (Skin Cutaneous Melanoma)"
+            ]
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Skin cancer (including basal cell and squamous cell skin cancers)"
+            ],
+            "tcga": []
+        }
+        },
+
+        "NON_MELANOMA_SKIN": {
+        "description": "Non-melanoma skin cancers are mapped by requiring C44 Skin together with the relevant histology. This separates basal cell, squamous cell, and Merkel cell skin cancers from cutaneous melanoma.",
+        "rules": [
+            {
+            "rule_name": "basal_cell_skin",
+            "match_type": "topography_and_histology",
+            "topography": [
+                "C44 Skin"
+            ],
+            "histology_codes": [
+                "8090/3"
+            ],
+            "cruk": [
+                "Basal cell skin cancer"
+            ],
+            "tcga": []
+            },
+            {
+            "rule_name": "squamous_cell_skin",
+            "match_type": "topography_and_histology",
+            "topography": [
+                "C44 Skin"
+            ],
+            "histology_codes": [
+                "8070/3"
+            ],
+            "cruk": [
+                "Squamous cell skin cancer"
+            ],
+            "tcga": []
+            },
+            {
+            "rule_name": "merkel_cell_skin",
+            "match_type": "topography_and_histology",
+            "topography": [
+                "C44 Skin"
+            ],
+            "histology_codes": [
+                "8247/3"
+            ],
+            "cruk": [
+                "Merkel cell skin cancer"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Skin cancer (including basal cell and squamous cell skin cancers)"
+            ],
+            "tcga": []
+        }
+        },
+
+        "UVM": {
+        "description": "Uveal melanoma is a site-specific melanoma distinct from cutaneous melanoma. Mapping requires both topography (C69 Eye and adnexa) and histology (8720/3). Cases where melanoma histology is present but topography is not C69 must not be mapped here.",
+        "rules": [
+            {
+            "rule_name": "uveal_melanoma",
+            "match_type": "topography_and_histology",
+            "topography": [
+                "C69 Eye and adnexa"
+            ],
+            "histology_codes": [
+                "8720/3"
+            ],
+            "cruk": [
+                "Eye cancer"
+            ],
+            "tcga": [
+                "UVM (Uveal Melanoma)"
+            ]
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Eye cancer"
+            ],
+            "tcga": []
+        }
+        },
+
+        "HNSC": {
+        "description": "Head and neck squamous cell carcinomas require both a topography within the lip, oral cavity, pharynx (C00–C14) or larynx (C32) ranges, and a squamous histology code. Tumours arising in adjacent regions such as thyroid (C73) or salivary glands (C07–C08) are intentionally excluded, even if squamous histology is present.",
+        "rules": [
+            {
+            "rule_name": "head_neck_squamous",
+            "match_type": "topography_group_and_histology",
+            "topography_codes": [
+                "C00-C14",
+                "C32"
+            ],
+            "topography_description": "Lip, oral cavity, pharynx (C00-C14) and larynx (C32)",
+            "histology_codes": [
+                "8070/3",
+                "8071/3",
+                "8085/3",
+                "8086/3"
+            ],
+            "cruk": [
+                "Head and neck cancer"
+            ],
+            "tcga": [
+                "HNSC (Head and Neck squamous cell carcinoma)"
+            ]
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Head and neck cancer"
+            ],
+            "tcga": []
+        }
+        },
+
+        "EAR": {
+        "description": "Ear cancer is mapped by exact ear topography. This currently captures middle ear topography.",
+        "rules": [
+            {
+            "rule_name": "ear_exact",
+            "match_type": "topography_exact",
+            "topography": [
+                "C30.1 Middle ear"
+            ],
+            "cruk": [
+                "Ear cancer"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Ear cancer"
+            ],
+            "tcga": []
+        }
+        },
+
+        "SPINAL_CORD": {
+        "description": "Spinal cord tumours are mapped by exact spinal cord topography.",
+        "rules": [
+            {
+            "rule_name": "spinal_cord_exact",
+            "match_type": "topography_exact",
+            "topography": [
+                "C72.0 Spinal cord"
+            ],
+            "cruk": [
+                "Spinal cord tumours"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Spinal cord tumours"
+            ],
+            "tcga": []
+        }
+        },
+
+        "BONE": {
+        "description": "Bone cancer is mapped by primary bone topography.",
+        "rules": [
+            {
+            "rule_name": "bone_group",
+            "match_type": "topography_group",
+            "topography_codes": [
+                "C40-C41"
+            ],
+            "topography_description": "Bones, joints and articular cartilage of limbs and other/unspecified sites (C40-C41)",
+            "cruk": [
+                "Bone cancer"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Bone cancer"
+            ],
+            "tcga": []
+        }
+        },
+
+        "ADRENAL": {
+        "description": "Tumours of the adrenal gland are mapped by adrenal topography as a broad adrenal category.",
+        "rules": [
+            {
+            "rule_name": "adrenal_exact",
+            "match_type": "topography_exact",
+            "topography": [
+                "C74 Adrenal gland"
+            ],
+            "cruk": [
+                "Tumours of the adrenal gland"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Tumours of the adrenal gland"
+            ],
+            "tcga": []
+        }
+        },
+
+        "GASTRO_OESOPHAGEAL_JUNCTION": {
+        "description": "Gastro oesophageal junction cancers are mapped as a special anatomical junction site between the oesophagus and stomach.",
+        "rules": [
+            {
+            "rule_name": "goj_exact",
+            "match_type": "topography_exact",
+            "topography": [
+                "C16.0 Cardia, NOS"
+            ],
+            "cruk": [
+                "Gastro oesophageal junction cancers"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Gastro oesophageal junction cancers"
+            ],
+            "tcga": []
+        }
+        },
+
+        "MOUTH_OROPHARYNGEAL": {
+        "description": "Mouth and oropharyngeal cancer is mapped using grouped topography across oral cavity and oropharyngeal sites.",
+        "rules": [
+            {
+            "rule_name": "mouth_oropharyngeal_group",
+            "match_type": "topography_group",
+            "topography_codes": [
+                "C00-C10"
+            ],
+            "topography_description": "Lip, oral cavity and oropharynx (C00-C10)",
+            "cruk": [
+                "Mouth and oropharyngeal cancer"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Mouth and oropharyngeal cancer"
+            ],
+            "tcga": []
+        }
+        },
+
+        "NASAL_PARANASAL_SINUS": {
+        "description": "Nasal and paranasal sinus cancer is mapped using nasal cavity and accessory sinus topography.",
+        "rules": [
+            {
+            "rule_name": "nasal_paranasal_group",
+            "match_type": "topography_group",
+            "topography_codes": [
+                "C30-C31"
+            ],
+            "topography_description": "Nasal cavity, middle ear and accessory sinuses (C30-C31)",
+            "cruk": [
+                "Nasal and paranasal sinus cancer"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Nasal and paranasal sinus cancer"
+            ],
+            "tcga": []
+        }
+        },
+
+        "UPPER_URINARY_TRACT_UROTHELIAL": {
+        "description": "Upper urinary tract urothelial cancer is mapped using upper urinary tract topography together with urothelial/transitional histology.",
+        "rules": [
+            {
+            "rule_name": "upper_urinary_urothelial",
+            "match_type": "topography_group_and_histology",
+            "topography_codes": [
+                "C65-C66"
+            ],
+            "topography_description": "Renal pelvis and ureter (C65-C66)",
+            "histology_codes": [
+                "8120/3"
+                
+            ],
+            "cruk": [
+                "Upper urinary tract urothelial cancer"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Upper urinary tract urothelial cancer"
+            ],
+            "tcga": []
+        }
+        },
+
+        "MEDIASTINAL_GERM_CELL": {
+        "description": "Mediastinal germ cell tumours are mapped using mediastinal topography together with representative malignant germ cell histology.",
+        "rules": [
+            {
+            "rule_name": "mediastinal_germ_cell",
+            "match_type": "topography_group_and_histology",
+            "topography_codes": [
+                "C38"
+            ],
+            "topography_description": "Heart, mediastinum and pleura (C38)",
+            "histology_codes": [
+                "9061/3",
+                "9064/3",
+                "9070/3",
+                "9080/3"
+            ],
+            "cruk": [
+                "Mediastinal germ cell tumours"
+            ],
+            "tcga": []
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Mediastinal germ cell tumours"
+            ],
+            "tcga": []
+        }
+        }
+    },
+
+    "multi_site_or_overlap_mappings": {
+        "PCPG": {
+        "description": "Pheochromocytoma and paraganglioma are mapped by histology alone because they arise at both adrenal (pheochromocytoma, 8700/3) and extra-adrenal sites (paraganglioma, 8680/3). Using topography to distinguish them is unreliable across registries, so histology is the sole discriminator.",
+        "rules": [
+            {
+            "rule_name": "pcpg_family",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "8700/3",
+                "8680/3"
+            ],
+            "cruk": [
+                "Phaeochromocytoma"
+            ],
+            "tcga": [
+                "PCPG (Pheochromocytoma and Paraganglioma)"
+            ]
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Adrenal gland tumours"
+            ],
+            "tcga": []
+        }
+        },
+
+        "CHOL": {
+        "description": "Cholangiocarcinoma is mapped by histology alone (8160/3) because it arises at overlapping biliary sites including intrahepatic (C22.1) and extrahepatic (C24.0) locations. Both are captured by a single histology code. If site-level distinction is required in future, this rule should be split into topography_and_histology rules.",
+        "rules": [
+            {
+            "rule_name": "cholangiocarcinoma_exact",
+            "match_type": "histology_exact",
+            "histology_codes": [
+                "8160/3"
+            ],
+            "cruk": [
+                "Cholangiocarcinoma"
+            ],
+            "tcga": [
+                "CHOL (Cholangiocarcinoma)"
+            ]
+            }
+        ],
+        "fallback": {
+            "cruk": [
+            "Bile duct cancer"
+            ],
+            "tcga": []
+        }
+        }
+    }
+    }

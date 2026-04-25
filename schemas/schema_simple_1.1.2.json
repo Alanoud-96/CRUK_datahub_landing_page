@@ -1,0 +1,108 @@
+{
+  "topography_mappings": {
+    "C02 Tongue": {
+      "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+      "default_CRUK": ["Tongue cancer"]
+    },
+
+    "C07 Parotid gland": {
+      "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+      "default_CRUK": ["Salivary gland cancer"]
+    },
+
+    "C09 Tonsil": {
+      "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+      "default_CRUK": ["Tonsil cancer"]
+    },
+
+    "C11 Nasopharynx": {
+      "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+      "default_CRUK": ["Nasopharyngeal cancer"]
+    },
+
+    "C15 Esophagus": {
+      "default_tcga": ["ESCA (Esophageal carcinoma)"],
+      "default_CRUK": ["Oesophageal cancer"]
+    },
+
+    "C16 Stomach": {
+      "default_tcga": ["STAD (Stomach adenocarcinoma)"],
+      "default_CRUK": ["Gastric cancer"]
+    },
+
+    "C18 Colon": {
+      "default_tcga": ["COAD (Colon adenocarcinoma)"],
+      "default_CRUK": ["Colorectal cancer"]
+    },
+
+    "C20 Rectum": {
+      "default_tcga": ["READ (Rectum adenocarcinoma)"],
+      "default_CRUK": ["Rectal cancer"]
+    },
+
+    "C21 Anus": {
+      "default_tcga": [],
+      "default_CRUK": ["Anal cancer"]
+    },
+
+    "C23 Gallbladder": {
+      "default_tcga": [],
+      "default_CRUK": ["Gallbladder cancer"]
+    },
+
+    "C32 Larynx": {
+      "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+      "default_CRUK": ["Laryngeal cancer"]
+    },
+
+    "C37 Thymus": {
+      "default_tcga": ["THYM (Thymoma)"],
+      "default_CRUK": ["Thymus gland tumours"]
+    },
+
+    "C50 Breast": {
+      "default_tcga": ["BRCA (Breast invasive carcinoma)"],
+      "default_CRUK": ["Breast cancer"]
+    },
+
+    "C53 Cervix uteri": {
+      "default_tcga": ["CESC (Cervical squamous cell carcinoma and endocervical adenocarcinoma)"],
+      "default_CRUK": ["Cervical cancer"]
+    },
+
+    "C54 Corpus uteri": {
+      "default_tcga": ["UCEC (Uterine Corpus Endometrial Carcinoma)"],
+      "default_CRUK": ["Endometrial cancer"]
+    },
+
+    "C56 Ovary": {
+      "default_tcga": ["OV (Ovarian serous cystadenocarcinoma)"],
+      "default_CRUK": ["Ovarian cancer"]
+    },
+
+    "C60 Penis": {
+      "default_tcga": [],
+      "default_CRUK": ["Penile cancer"]
+    },
+
+    "C61 Prostate gland": {
+      "default_tcga": ["PRAD (Prostate adenocarcinoma)"],
+      "default_CRUK": ["Prostate cancer"]
+    },
+
+    "C62 Testis": {
+      "default_tcga": ["TGCT (Testicular Germ Cell Tumors)"],
+      "default_CRUK": ["Testicular cancer"]
+    },
+
+    "C67 Bladder": {
+      "default_tcga": ["BLCA (Bladder Urothelial Carcinoma)"],
+      "default_CRUK": ["Bladder cancer"]
+    },
+
+    "C73 Thyroid gland": {
+      "default_tcga": ["THCA (Thyroid carcinoma)"],
+      "default_CRUK": ["Thyroid cancer"]
+    }
+  }
+}

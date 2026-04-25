@@ -1,0 +1,276 @@
+{
+    "schema_version": "1.1.2",
+    "schema_name": "schema_rare_1.1.2",
+    "schema_type": "rare_mapping",
+    "description": "Schema for rare named CRUK cancer labels using topography-based, histology-based, combined topography-and-histology, direct CRUK label, and fallback mapping rules.",
+    "rule_groups": {
+        "group_1": "Topography-based rare cancers",
+        "group_2": "Histology-based rare cancers",
+        "group_3": "Combined topography and histology rare cancers",
+        "group_4": "Direct CRUK label rare mappings",
+        "group_5": "Fallback rare cancer rule"
+    },
+    "rare_rules": [
+
+        {
+            "rule_name": "ampullary_cancer_by_topography",
+            "rule_group": "Topography-based rare cancers",
+            "match_type": "topography_exact",
+            "topography_exact": [
+                "C24.1 Ampulla of Vater"
+            ],
+            "return_CRUK": ["Ampullary cancer"]
+        },
+        {
+            "rule_name": "eye_cancer_by_topography",
+            "rule_group": "Topography-based rare cancers",
+            "match_type": "topography_exact",
+            "topography_exact": [
+                "C69 Eye and adnexa",
+                "C69.0 Conjunctiva",
+                "C69.1 Cornea, NOS",
+                "C69.2 Retina",
+                "C69.3 Choroid",
+                "C69.4 Ciliary body",
+                "C69.5 Lacrimal gland",
+                "C69.6 Orbit, NOS",
+                "C69.9 Eye, NOS"
+            ],
+            "return_CRUK": ["Eye cancer"]
+        },
+
+        {
+            "rule_name": "retinoblastoma_by_histology",
+            "rule_group": "Histology-based rare cancers",
+            "match_type": "histology_exact",
+            "histology_exact": [
+                "9510/3 Retinoblastoma, NOS"
+            ],
+            "return_CRUK": ["Retinoblastoma"]
+        },
+        {
+            "rule_name": "neuroblastoma_by_histology",
+            "rule_group": "Histology-based rare cancers",
+            "match_type": "histology_exact",
+            "histology_exact": [
+                "9500/3 Neuroblastoma, NOS"
+            ],
+            "return_CRUK": ["Neuroblastoma"]
+        },
+        {
+            "rule_name": "kaposis_sarcoma_by_histology",
+            "rule_group": "Histology-based rare cancers",
+            "match_type": "histology_exact",
+            "histology_exact": [
+                "9140/3 Kaposi sarcoma"
+            ],
+            "return_CRUK": ["Kaposi's sarcoma"]
+        },
+        {
+            "rule_name": "follicular_dendritic_cell_sarcoma_by_histology",
+            "rule_group": "Histology-based rare cancers",
+            "match_type": "histology_exact",
+            "histology_exact": [
+                "9758/3 Follicular dendritic cell sarcoma"
+            ],
+            "return_CRUK": ["Follicular dendritic cell sarcoma"]
+        },
+        {
+            "rule_name": "malignant_schwannoma_by_histology",
+            "rule_group": "Histology-based rare cancers",
+            "match_type": "histology_exact",
+            "histology_exact": [
+                "9540/3 Malignant peripheral nerve sheath tumor, NOS",
+                "9542/3 Malignant peripheral nerve sheath tumor, epithelioid",
+                "9561/3 Malignant peripheral nerve sheath tumor with rhabdomyoblastic differentiation"
+            ],
+            "return_CRUK": ["Malignant schwannoma"]
+        },
+        {
+            "rule_name": "gist_by_histology",
+            "rule_group": "Histology-based rare cancers",
+            "match_type": "histology_exact",
+            "histology_exact": [
+                "8936/3 Gastrointestinal stromal tumor"
+            ],
+            "return_CRUK": ["Rare cancer"]
+        },
+    {
+        "rule_name": "angiosarcoma_by_histology",
+        "rule_group": "Histology-based rare cancers",
+        "match_type": "histology_exact",
+        "histology_exact": [
+            "9120/3 Hemangiosarcoma"
+        ],
+        "return_CRUK": ["Rare cancer"]
+        },
+        {
+            "rule_name": "osteosarcoma_by_histology",
+            "rule_group": "Histology-based rare cancers",
+            "match_type": "histology_exact",
+            "histology_exact": [
+                "9180/3 Osteosarcoma, NOS",
+                "9181/3 Chondroblastic osteosarcoma",
+                "9182/3 Fibroblastic osteosarcoma",
+                "9183/3 Telangiectatic osteosarcoma",
+                "9184/3 Osteosarcoma in Paget disease of bone",
+                "9185/3 Small cell osteosarcoma",
+                "9186/3 Central osteosarcoma, NOS",
+                "9187/3 Low grade central osteosarcoma",
+                "9192/3 Parosteal osteosarcoma",
+                "9193/3 Periosteal osteosarcoma",
+                "9194/3 High grade surface osteosarcoma"
+            ],
+            "return_CRUK": ["Bone cancer"]
+        },
+        {
+            "rule_name": "ewing_sarcoma_by_histology",
+            "rule_group": "Histology-based rare cancers",
+            "match_type": "histology_exact",
+            "histology_exact": [
+                "9260/3 Ewing sarcoma"
+            ],
+            "return_CRUK": ["Bone cancer"]
+        },
+        {
+            "rule_name": "chondrosarcoma_by_histology",
+            "rule_group": "Histology-based rare cancers",
+            "match_type": "histology_exact",
+            "histology_exact": [
+                "9220/3 Chondrosarcoma, NOS",
+                "9221/3 Periosteal chondrosarcoma",
+                "9231/3 Myxoid chondrosarcoma",
+                "9240/3 Mesenchymal chondrosarcoma",
+                "9242/3 Clear cell chondrosarcoma",
+                "9243/3 Dedifferentiated chondrosarcoma"
+            ],
+            "return_CRUK": ["Bone cancer"]
+        },
+
+        {
+            "rule_name": "wilms_tumour_by_topography_and_histology",
+            "rule_group": "Combined topography and histology rare cancers",
+            "match_type": "topography_exact_and_histology_exact",
+            "topography_exact": [
+                "C64 Kidney"
+            ],
+            "histology_exact": [
+                "8960/3 Nephroblastoma, NOS"
+            ],
+            "return_CRUK": ["Wilms tumour"]
+        },
+        {
+            "rule_name": "pseudomyxoma_peritonei_by_topography_and_histology",
+            "rule_group": "Combined topography and histology rare cancers",
+            "match_type": "topography_exact_and_histology_exact",
+            "topography_exact": [
+                "C48 Retroperitoneum and peritoneum"
+            ],
+            "histology_exact": [
+                "8480/3 Mucinous adenocarcinoma",
+                "8480/6 Pseudomyxoma peritonei"
+            ],
+            "return_CRUK": ["Pseudomyxoma peritonei"]
+        },
+
+        {
+            "rule_name": "wilms_tumour_direct",
+            "rule_group": "Direct CRUK label rare mappings",
+            "match_type": "cruk_label",
+            "cruk_label": "Wilms tumour",
+            "return_CRUK": ["Wilms tumour"]
+        },
+        {
+            "rule_name": "retinoblastoma_direct",
+            "rule_group": "Direct CRUK label rare mappings",
+            "match_type": "cruk_label",
+            "cruk_label": "Retinoblastoma",
+            "return_CRUK": ["Retinoblastoma"]
+        },
+        {
+            "rule_name": "pseudomyxoma_peritonei_direct",
+            "rule_group": "Direct CRUK label rare mappings",
+            "match_type": "cruk_label",
+            "cruk_label": "Pseudomyxoma peritonei",
+            "return_CRUK": ["Pseudomyxoma peritonei"]
+        },
+        {
+            "rule_name": "neuroblastoma_direct",
+            "rule_group": "Direct CRUK label rare mappings",
+            "match_type": "cruk_label",
+            "cruk_label": "Neuroblastoma",
+            "return_CRUK": ["Neuroblastoma"]
+        },
+        {
+            "rule_name": "malignant_schwannoma_direct",
+            "rule_group": "Direct CRUK label rare mappings",
+            "match_type": "cruk_label",
+            "cruk_label": "Malignant schwannoma",
+            "return_CRUK": ["Malignant schwannoma"]
+        },
+        {
+            "rule_name": "kaposis_sarcoma_direct",
+            "rule_group": "Direct CRUK label rare mappings",
+            "match_type": "cruk_label",
+            "cruk_label": "Kaposi's sarcoma",
+            "return_CRUK": ["Kaposi's sarcoma"]
+        },
+        {
+            "rule_name": "follicular_dendritic_cell_sarcoma_direct",
+            "rule_group": "Direct CRUK label rare mappings",
+            "match_type": "cruk_label",
+            "cruk_label": "Follicular dendritic cell sarcoma",
+            "return_CRUK": ["Follicular dendritic cell sarcoma"]
+        },
+        {
+            "rule_name": "ampullary_cancer_direct",
+            "rule_group": "Direct CRUK label rare mappings",
+            "match_type": "cruk_label",
+            "cruk_label": "Ampullary cancer",
+            "return_CRUK": ["Ampullary cancer"]
+        },
+        {
+            "rule_name": "gist_direct",
+            "rule_group": "Direct CRUK label rare mappings",
+            "match_type": "cruk_label",
+            "cruk_label": "Gastrointestinal stromal tumour (GIST)",
+            "return_CRUK": ["Gastrointestinal stromal tumour (GIST)"]
+        },
+        {
+            "rule_name": "angiosarcoma_direct",
+            "rule_group": "Direct CRUK label rare mappings",
+            "match_type": "cruk_label",
+            "cruk_label": "Angiosarcoma",
+            "return_CRUK": ["Angiosarcoma"]
+        },
+        {
+            "rule_name": "bone_sarcoma_direct",
+            "rule_group": "Direct CRUK label rare mappings",
+            "match_type": "cruk_label",
+            "cruk_label": "Bone sarcoma",
+            "return_CRUK": ["Bone sarcoma"]
+        },
+        {
+            "rule_name": "eye_cancer_direct",
+            "rule_group": "Direct CRUK label rare mappings",
+            "match_type": "cruk_label",
+            "cruk_label": "Eye cancer",
+            "return_CRUK": ["Eye cancer"]
+        },
+        {
+            "rule_name": "rare_cancer_direct",
+            "rule_group": "Direct CRUK label rare mappings",
+            "match_type": "cruk_label",
+            "cruk_label": "Rare cancer",
+            "return_CRUK": ["Rare cancer"]
+        },
+
+        {
+            "rule_name": "rare_cancer_fallback",
+            "rule_group": "Fallback rare cancer rule",
+            "match_type": "fallback",
+            "return_CRUK": ["Rare cancer"],
+            "return_TCGA": []
+        }
+    ]
+}
