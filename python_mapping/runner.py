@@ -124,7 +124,7 @@ def build_dataset_context(
                 "category": "crukTerms",
                 "primaryGroup": "cancer-type",
                 "description": "",
-                "isGenerated": True,  # pipeline-constructed; must not trigger cruk_label special rules
+                "isGenerated": True,
             })
 
     return {
@@ -154,16 +154,8 @@ def detect_male_keywords(
     topography_label: Optional[str],
     histology_label: Optional[str],
 ) -> bool:
-    # Only inspect anatomical inputs (topography and histology) to determine
-    # whether a term is male-specific. Existing CRUK labels are deliberately
-    # excluded: they are pipeline outputs, not evidence of male anatomy, and
-    # including them caused "Men's cancer" to re-trigger on female datasets
-    # when the label was already present from a previous mapping pass.
-    #
-    # Whole-word matching is required: substring matching would cause
-    # "female" and "C51-C58 Female genital organs" to match "male",
-    # and "menstrual" to match "men".
     import re
+
     keywords = [r"\bmale\b", r"\bman\b", r"\bmen\b"]
 
     searchable_values = [
@@ -207,7 +199,7 @@ def unpack_mapping_response(
 
     if len(response) == 4:
         matched_term, matched_rule, cruk_terms, tcga_terms = response
-        return matched_term, None, ensure_list_of_objects(cruk_terms), ensure_list_of_objects(tcga_terms)
+        return matched_term, matched_rule, ensure_list_of_objects(cruk_terms), ensure_list_of_objects(tcga_terms)
 
     return None, None, [], []
 
@@ -342,7 +334,6 @@ def run_runner_pipeline(
     logger.info("Childhood case detected: %s", childhood_case_detected)
     logger.info("Male-specific case detected: %s", male_case_detected)
 
-    # 1. SIMPLE
     stage_results, remaining_terms = run_mapping_stage(
         stage_name="simple",
         remaining_terms=remaining_terms,
@@ -356,7 +347,6 @@ def run_runner_pipeline(
 
     validate_histology_for_deeper_levels(remaining_terms, histology_label, encountered_problems)
 
-    # 2. INTERMEDIATE
     stage_results, remaining_terms = run_mapping_stage(
         stage_name="intermediate",
         remaining_terms=remaining_terms,
@@ -368,7 +358,6 @@ def run_runner_pipeline(
     )
     results.extend(stage_results)
 
-    # 3. COMPLEX
     stage_results, remaining_terms = run_mapping_stage(
         stage_name="complex",
         remaining_terms=remaining_terms,
@@ -380,7 +369,6 @@ def run_runner_pipeline(
     )
     results.extend(stage_results)
 
-    # 4. SPECIAL
     stage_results, remaining_terms = run_mapping_stage(
         stage_name="special",
         remaining_terms=remaining_terms,
@@ -392,7 +380,6 @@ def run_runner_pipeline(
     )
     results.extend(stage_results)
 
-    # 5. RARE
     stage_results, remaining_terms = run_mapping_stage(
         stage_name="rare",
         remaining_terms=remaining_terms,
@@ -438,38 +425,12 @@ if __name__ == "__main__":
         description="Run simple -> intermediate -> complex -> special -> rare mapping pipeline."
     )
 
-    parser.add_argument(
-        "--label",
-        required=True,
-        help='ICD-O topography label, e.g. "C64 Kidney"'
-    )
-    parser.add_argument(
-        "--category",
-        default="icdOTopography",
-        help='Input term category (default: "icdOTopography")'
-    )
-    parser.add_argument(
-        "--histology",
-        default=None,
-        help='Optional histology string, e.g. "8312/3 Renal cell carcinoma, NOS"'
-    )
-    parser.add_argument(
-        "--existing-cruk-label",
-        action="append",
-        default=[],
-        help='Optional existing CRUK label(s). Can be repeated.'
-    )
-    parser.add_argument(
-        "--age-range-max",
-        type=int,
-        default=None,
-        help="Optional AgeRangeMax value for childhood cancer detection."
-    )
-    parser.add_argument(
-        "--output",
-        default=None,
-        help='Optional output JSON file path, e.g. "outputs/runner_output.json"'
-    )
+    parser.add_argument("--label", required=True, help='ICD-O topography label, e.g. "C64 Kidney"')
+    parser.add_argument("--category", default="icdOTopography", help='Input term category')
+    parser.add_argument("--histology", default=None, help='Optional histology string')
+    parser.add_argument("--existing-cruk-label", action="append", default=[], help='Optional existing CRUK label(s)')
+    parser.add_argument("--age-range-max", type=int, default=None, help="Optional AgeRangeMax value")
+    parser.add_argument("--output", default=None, help='Optional output JSON file path')
 
     args = parser.parse_args()
 

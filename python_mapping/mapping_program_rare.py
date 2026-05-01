@@ -2,6 +2,8 @@ import json
 import os
 from typing import Any, Dict, List, Optional, Tuple
 
+from mapping_utils import resolve_labels_to_objects
+
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(CURRENT_DIR)
@@ -28,19 +30,6 @@ def deduplicate_strings(items: List[str]) -> List[str]:
     for item in items:
         if item not in seen:
             seen.add(item)
-            unique_items.append(item)
-
-    return unique_items
-
-
-def deduplicate_by_id(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    seen = set()
-    unique_items = []
-
-    for item in items:
-        item_id = item.get("id")
-        if item_id not in seen:
-            seen.add(item_id)
             unique_items.append(item)
 
     return unique_items
@@ -87,11 +76,8 @@ def extract_topography_labels(dataset: Dict[str, Any]) -> List[str]:
     for item in collect_dataset_filters(dataset):
         label = item.get("label", "")
         primary_group = item.get("primaryGroup", "")
-        if (
-            isinstance(label, str)
-            and label.startswith("C")
-            and primary_group == "cancer-type"
-        ):
+
+        if isinstance(label, str) and label.startswith("C") and primary_group == "cancer-type":
             topography_labels.append(label)
 
     return deduplicate_strings(topography_labels)
@@ -103,62 +89,11 @@ def extract_cruk_labels(dataset: Dict[str, Any]) -> List[str]:
     for item in collect_dataset_filters(dataset):
         category = item.get("category", "")
         label = item.get("label", "")
+
         if category == "crukTerms" and isinstance(label, str):
             cruk_labels.append(label)
 
     return deduplicate_strings(cruk_labels)
-
-
-def flatten_filter_nodes(filter_data: Any) -> List[Dict[str, Any]]:
-    flattened = []
-
-    def search_node(node: Any) -> None:
-        if isinstance(node, dict):
-            if "id" in node and "label" in node:
-                flattened.append({
-                    "id": node.get("id"),
-                    "label": node.get("label"),
-                    "category": node.get("category"),
-                    "primaryGroup": node.get("primaryGroup"),
-                    "description": node.get("description")
-                })
-            for value in node.values():
-                search_node(value)
-        elif isinstance(node, list):
-            for item in node:
-                search_node(item)
-
-    search_node(filter_data)
-    return deduplicate_by_id(flattened)
-
-
-FLATTENED_FILTER_DATA = flatten_filter_nodes(LONGER_FILTER_DATA)
-
-
-def resolve_filter_object_by_label(label: str) -> Optional[Dict[str, Any]]:
-    key = LABEL_KEY_DICT.get(label)
-
-    if key is not None:
-        for item in FLATTENED_FILTER_DATA:
-            if item.get("id") == key:
-                return item
-
-    for item in FLATTENED_FILTER_DATA:
-        if item.get("label") == label:
-            return item
-
-    return None
-
-
-def resolve_filter_objects(labels: List[str]) -> List[Dict[str, Any]]:
-    resolved = []
-
-    for label in labels:
-        obj = resolve_filter_object_by_label(label)
-        if obj is not None:
-            resolved.append(obj)
-
-    return deduplicate_by_id(resolved)
 
 
 def match_topography_exact(rule: Dict[str, Any], topography_labels: List[str]) -> bool:
@@ -210,6 +145,25 @@ def evaluate_rule(
     return False
 
 
+def get_ordered_rare_rules(rare_rules: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    priority_order = [
+        "topography_exact_and_histology_exact",
+        "topography_exact",
+        "histology_exact",
+        "cruk_label",
+        "fallback"
+    ]
+
+    ordered_rules = []
+
+    for match_type in priority_order:
+        for rule in rare_rules:
+            if rule.get("match_type") == match_type:
+                ordered_rules.append(rule)
+
+    return ordered_rules
+
+
 def get_rare_mapped_terms(dataset: Dict[str, Any]) -> Tuple[
     Optional[str],
     Optional[str],
@@ -221,28 +175,27 @@ def get_rare_mapped_terms(dataset: Dict[str, Any]) -> Tuple[
     cruk_labels = extract_cruk_labels(dataset)
 
     rare_rules = RARE_SCHEMA.get("rare_rules", [])
-
-    priority_order = [
-        "topography_exact_and_histology_exact",
-        "topography_exact",
-        "histology_exact",
-        "cruk_label",
-        "fallback"
-    ]
-
-    ordered_rules = []
-    for match_type in priority_order:
-        for rule in rare_rules:
-            if rule.get("match_type") == match_type:
-                ordered_rules.append(rule)
+    ordered_rules = get_ordered_rare_rules(rare_rules)
 
     for rule in ordered_rules:
         if evaluate_rule(rule, topography_labels, histology_labels, cruk_labels):
-            matched_term = ", ".join(rule.get("return_CRUK", []))
+            return_cruk_labels = rule.get("return_CRUK", [])
+            return_tcga_labels = rule.get("return_TCGA", [])
+
+            matched_term = ", ".join(return_cruk_labels) or None
             matched_rule = rule.get("rule_name")
 
-            cruk_objects = resolve_filter_objects(rule.get("return_CRUK", []))
-            tcga_objects = resolve_filter_objects(rule.get("return_TCGA", []))
+            cruk_objects = resolve_labels_to_objects(
+                return_cruk_labels,
+                LABEL_KEY_DICT,
+                LONGER_FILTER_DATA
+            )
+
+            tcga_objects = resolve_labels_to_objects(
+                return_tcga_labels,
+                LABEL_KEY_DICT,
+                LONGER_FILTER_DATA
+            )
 
             return matched_term, matched_rule, cruk_objects, tcga_objects
 

@@ -1,6 +1,8 @@
 import json
 import os
 
+from mapping_utils import resolve_labels_to_objects
+
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(CURRENT_DIR)
 
@@ -20,46 +22,6 @@ with open(FILTER_DATA_PATH, encoding="utf-8") as f:
 special_rules = schema["special_rules"]
 
 
-def collect_all_filter_objects(data):
-    collected = []
-
-    if isinstance(data, dict):
-        if "label" in data and "id" in data and "category" in data:
-            collected.append(data)
-
-        for value in data.values():
-            collected.extend(collect_all_filter_objects(value))
-
-    elif isinstance(data, list):
-        for item in data:
-            collected.extend(collect_all_filter_objects(item))
-
-    return collected
-
-
-def find_objects_by_labels(data, target_labels):
-    matched_objects = []
-    seen_ids = set()
-
-    all_objects = collect_all_filter_objects(data)
-
-    for obj in all_objects:
-        label = obj.get("label")
-        obj_id = obj.get("id")
-
-        if label in target_labels and obj_id not in seen_ids:
-            matched_objects.append({
-                "id": obj.get("id"),
-                "label": obj.get("label"),
-                "category": obj.get("category"),
-                "primaryGroup": obj.get("primaryGroup"),
-                "description": obj.get("description")
-            })
-            seen_ids.add(obj_id)
-
-    return matched_objects
-
-
 def normalise_label(value):
     if value is None:
         return ""
@@ -75,10 +37,6 @@ def extract_input_labels(dataset_filters):
         category = item.get("category")
         label = item.get("label")
 
-        # Skip auto-generated crukTerms so that special rules only fire on
-        # original user-selected CRUK inputs, not on terms injected by a
-        # previous mapping pass (which would cause rules like "Men's cancer"
-        # to match datasets such as C51-C58 Female genital organs).
         if category == "crukTerms" and cruk_label is None and not item.get("isGenerated"):
             cruk_label = label
 
@@ -126,38 +84,12 @@ def get_matching_special_rules(cruk_label, topography_label, histology_label):
     return matches
 
 
-def get_return_cruk_labels(cruk_label, topography_label, histology_label):
-    matched_rules = get_matching_special_rules(
-        cruk_label,
-        topography_label,
-        histology_label
-    )
-
+def get_return_labels(matched_rules, output_key):
     return_labels = []
     seen_labels = set()
 
     for rule in matched_rules:
-        for label in rule.get("return_CRUK", []):
-            normalised = normalise_label(label)
-            if normalised and normalised not in seen_labels:
-                return_labels.append(normalised)
-                seen_labels.add(normalised)
-
-    return return_labels
-
-
-def get_return_tcga_labels(cruk_label, topography_label, histology_label):
-    matched_rules = get_matching_special_rules(
-        cruk_label,
-        topography_label,
-        histology_label
-    )
-
-    return_labels = []
-    seen_labels = set()
-
-    for rule in matched_rules:
-        for label in rule.get("return_TCGA", []):
+        for label in rule.get(output_key, []):
             normalised = normalise_label(label)
             if normalised and normalised not in seen_labels:
                 return_labels.append(normalised)
@@ -185,28 +117,33 @@ def map_special_cruk_terms(dataset_filters):
         histology_label
     )
 
-    return_cruk_labels = get_return_cruk_labels(
-        cruk_label,
-        topography_label,
-        histology_label
-    )
-
-    return_tcga_labels = get_return_tcga_labels(
-        cruk_label,
-        topography_label,
-        histology_label
-    )
+    return_cruk_labels = get_return_labels(matched_rules, "return_CRUK")
+    return_tcga_labels = get_return_labels(matched_rules, "return_TCGA")
 
     missing_labels_in_label_key_dict = get_missing_labels_from_label_key_dict(
-        return_cruk_labels,
+        return_cruk_labels + return_tcga_labels,
         label_key_dict
     )
 
-    resolved_cruk_objects = find_objects_by_labels(filter_data, return_cruk_labels)
+    resolved_cruk_objects = resolve_labels_to_objects(
+        return_cruk_labels,
+        label_key_dict,
+        filter_data
+    )
 
-    resolved_labels = {obj.get("label") for obj in resolved_cruk_objects}
+    resolved_tcga_objects = resolve_labels_to_objects(
+        return_tcga_labels,
+        label_key_dict,
+        filter_data
+    )
+
+    resolved_labels = {
+        obj.get("label")
+        for obj in resolved_cruk_objects + resolved_tcga_objects
+    }
+
     missing_labels_in_filter_data = [
-        label for label in return_cruk_labels
+        label for label in return_cruk_labels + return_tcga_labels
         if label not in resolved_labels
     ]
 
@@ -221,7 +158,8 @@ def map_special_cruk_terms(dataset_filters):
         "return_tcga_labels": return_tcga_labels,
         "missing_labels_in_label_key_dict": missing_labels_in_label_key_dict,
         "missing_labels_in_filter_data": missing_labels_in_filter_data,
-        "resolved_cruk_objects": resolved_cruk_objects
+        "resolved_cruk_objects": resolved_cruk_objects,
+        "resolved_tcga_objects": resolved_tcga_objects
     }
 
 
@@ -232,12 +170,12 @@ def get_special_mapped_terms(dataset):
 
     matched_rule_names = result.get("matched_rule_names", [])
     resolved_cruk_objects = result.get("resolved_cruk_objects", [])
-    return_tcga_labels = result.get("return_tcga_labels", [])
+    resolved_tcga_objects = result.get("resolved_tcga_objects", [])
 
     matched_term = ", ".join(result.get("return_cruk_labels", [])) or None
     matched_rule = ", ".join(matched_rule_names) if matched_rule_names else None
 
-    return matched_term, matched_rule, resolved_cruk_objects, return_tcga_labels
+    return matched_term, matched_rule, resolved_cruk_objects, resolved_tcga_objects
 
 
 if __name__ == "__main__":

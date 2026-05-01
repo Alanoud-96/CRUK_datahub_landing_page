@@ -1,16 +1,17 @@
+NODE_FIELDS = ("id", "label", "category", "primaryGroup", "description")
+
+
+def extract_node_fields(node):
+    return {field: node.get(field) for field in NODE_FIELDS}
+
+
 def find_objects_by_labels(data, target_labels):
     matched_objects = []
 
     def search_node(node):
         if isinstance(node, dict):
-            if "label" in node and node["label"] in target_labels:
-                matched_objects.append({
-                    "id": node.get("id"),
-                    "label": node.get("label"),
-                    "category": node.get("category"),
-                    "primaryGroup": node.get("primaryGroup"),
-                    "description": node.get("description")
-                })
+            if node.get("label") in target_labels:
+                matched_objects.append(extract_node_fields(node))
 
             for value in node.values():
                 search_node(value)
@@ -35,13 +36,7 @@ def find_object_by_key(data, target_key):
         if isinstance(node, dict):
             for key, value in node.items():
                 if key == target_key and isinstance(value, dict):
-                    found_object = {
-                        "id": value.get("id"),
-                        "label": value.get("label"),
-                        "category": value.get("category"),
-                        "primaryGroup": value.get("primaryGroup"),
-                        "description": value.get("description")
-                    }
+                    found_object = extract_node_fields(value)
                     return
 
                 search_node(value)
@@ -52,6 +47,7 @@ def find_object_by_key(data, target_key):
 
     search_node(data)
     return found_object
+
 
 def find_raw_node_by_key(data, target_key):
     found_node = None
@@ -76,6 +72,7 @@ def find_raw_node_by_key(data, target_key):
 
     search_node(data)
     return found_node
+
 
 def deduplicate_by_id(items):
     seen = set()
@@ -114,6 +111,7 @@ def resolve_labels_to_objects(labels, label_key_dict, filter_data):
 
     return deduplicate_by_id(matched_objects)
 
+
 def collect_child_icdo_terms(node):
     collected_terms = []
 
@@ -132,13 +130,7 @@ def collect_child_icdo_terms(node):
         primary_group = child_value.get("primaryGroup", "")
 
         if primary_group == "cancer-type" and label.startswith("C"):
-            collected_terms.append({
-                "id": child_value.get("id"),
-                "label": child_value.get("label"),
-                "category": child_value.get("category"),
-                "primaryGroup": child_value.get("primaryGroup"),
-                "description": child_value.get("description")
-            })
+            collected_terms.append(extract_node_fields(child_value))
 
         collected_terms.extend(collect_child_icdo_terms(child_value))
 
