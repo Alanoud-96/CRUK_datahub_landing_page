@@ -1,248 +1,690 @@
 {
-  "topography_mappings": {
-    "C02 Tongue": {
-      "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
-      "default_CRUK": ["Tongue cancer"]
+"topography_mappings": {
+"C02 Tongue": {
+"default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+"default_CRUK": ["Tongue cancer"]
+},
+
+"C07 Parotid gland": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Salivary gland cancer"]
+},
+
+"C09 Tonsil": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Tonsil cancer"]
+},
+
+"C11 Nasopharynx": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Nasopharyngeal cancer"]
+},
+"C12 Pyriform sinus": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Head and neck cancer"]
+},
+
+"C12.9 Pyriform sinus": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Head and neck cancer"]
+},
+
+"C13 Hypopharynx": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Head and neck cancer"]
+},
+
+"C13.0 Postcricoid region": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Head and neck cancer"]
+},
+
+"C13.1 Hypopharyngeal aspect of aryepiglottic fold": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Head and neck cancer"]
+},
+
+"C13.2 Posterior wall of hypopharynx": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Head and neck cancer"]
+},
+
+"C13.8 Overlapping lesion of hypopharynx": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Head and neck cancer"]
+},
+
+"C13.9 Hypopharynx, nos": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Head and neck cancer"]
+},
+
+"C14 Other and ill-defined sites in lip, oral cavity and pharynx": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Head and neck cancer"]
+},
+
+"C14.0 Pharynx, nos": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Head and neck cancer"]
+},
+
+"C14.2 Waldeyer ring": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Head and neck cancer"]
+},
+
+"C14.8 Overlapping lesion of lip, oral cavity and pharynx": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Head and neck cancer"]
+},
+"C15-C26 Digestive organs": {
+  "default_tcga": [],
+  "default_CRUK": [
+    "Bowel cancer",
+    "Colorectal cancer",
+    "Rectal cancer",
+    "Pancreatic cancer",
+    "Oesophageal cancer"
+  ]
+},
+
+"C15 Esophagus": {
+  "default_tcga": ["ESCA (Esophageal carcinoma)"],
+  "default_CRUK": ["Oesophageal cancer"]
+},
+
+"C16 Stomach": {
+  "default_tcga": ["STAD (Stomach adenocarcinoma)"],
+  "default_CRUK": ["Gastric cancer"]
+},
+
+"C16.0 Cardia, nos": {
+  "default_tcga": [],
+  "default_CRUK": ["Gastro oesophageal junction cancers"]
+},
+
+"C16.1 Fundus of stomach": {
+  "default_tcga": ["STAD (Stomach adenocarcinoma)"],
+  "default_CRUK": ["Gastric cancer"]
+},
+
+"C16.2 Body of stomach": {
+  "default_tcga": ["STAD (Stomach adenocarcinoma)"],
+  "default_CRUK": ["Gastric cancer"]
+},
+
+"C16.3 Gastric antrum": {
+  "default_tcga": ["STAD (Stomach adenocarcinoma)"],
+  "default_CRUK": ["Gastric cancer"]
+},
+
+"C16.4 Pylorus": {
+  "default_tcga": ["STAD (Stomach adenocarcinoma)"],
+  "default_CRUK": ["Gastric cancer"]
+},
+
+"C16.5 Lesser curvature of stomach, nos": {
+  "default_tcga": ["STAD (Stomach adenocarcinoma)"],
+  "default_CRUK": ["Gastric cancer"]
+},
+
+"C16.6 Greater curvature of stomach, nos": {
+  "default_tcga": ["STAD (Stomach adenocarcinoma)"],
+  "default_CRUK": ["Gastric cancer"]
+},
+
+"C16.8 Overlapping lesion of stomach": {
+  "default_tcga": ["STAD (Stomach adenocarcinoma)"],
+  "default_CRUK": ["Gastric cancer"]
+},
+
+"C16.9 Stomach, nos": {
+  "default_tcga": ["STAD (Stomach adenocarcinoma)"],
+  "default_CRUK": ["Gastric cancer"]
+
+},
+
+"C18 Colon": {
+  "default_tcga": ["COAD (Colon adenocarcinoma)"],
+  "default_CRUK": ["Bowel cancer", "Colorectal cancer"]
+},
+
+"C18.0 Cecum": {
+  "default_tcga": ["COAD (Colon adenocarcinoma)"],
+  "default_CRUK": ["Bowel cancer", "Colorectal cancer"]
+},
+
+"C18.1 Appendix": {
+  "default_tcga": ["COAD (Colon adenocarcinoma)"],
+  "default_CRUK": ["Bowel cancer", "Colorectal cancer"]
+},
+
+"C18.2 Ascending colon": {
+  "default_tcga": ["COAD (Colon adenocarcinoma)"],
+  "default_CRUK": ["Bowel cancer", "Colorectal cancer"]
+},
+
+"C18.3 Hepatic flexure of colon": {
+  "default_tcga": ["COAD (Colon adenocarcinoma)"],
+  "default_CRUK": ["Bowel cancer", "Colorectal cancer"]
+},
+
+"C18.4 Transverse colon": {
+  "default_tcga": ["COAD (Colon adenocarcinoma)"],
+  "default_CRUK": ["Bowel cancer", "Colorectal cancer"]
+},
+
+"C18.5 Splenic flexure of colon": {
+  "default_tcga": ["COAD (Colon adenocarcinoma)"],
+  "default_CRUK": ["Bowel cancer", "Colorectal cancer"]
+},
+
+"C18.6 Descending colon": {
+  "default_tcga": ["COAD (Colon adenocarcinoma)"],
+  "default_CRUK": ["Bowel cancer", "Colorectal cancer"]
+},
+
+"C18.7 Sigmoid colon": {
+  "default_tcga": ["COAD (Colon adenocarcinoma)"],
+  "default_CRUK": ["Bowel cancer", "Colorectal cancer"]
+},
+
+"C18.8 Overlapping lesion of colon": {
+  "default_tcga": ["COAD (Colon adenocarcinoma)"],
+  "default_CRUK": ["Bowel cancer", "Colorectal cancer"]
+},
+
+"C18.9 Colon, nos": {
+  "default_tcga": ["COAD (Colon adenocarcinoma)"],
+  "default_CRUK": ["Bowel cancer", "Colorectal cancer"]
+
+},
+
+"C20 Rectum": {
+  "default_tcga": ["READ (Rectum adenocarcinoma)"],
+  "default_CRUK": ["Rectal cancer"]
+},
+
+"C21 Anus and anal canal": {
+  "default_tcga": [],
+  "default_CRUK": ["Anal cancer"]
+},
+
+"C21.0 Anus, nos": {
+  "default_tcga": [],
+  "default_CRUK": ["Anal cancer"]
+},
+
+"C21.1 Anal canal": {
+  "default_tcga": [],
+  "default_CRUK": ["Anal cancer"]
+},
+
+"C21.2 Cloacogenic zone": {
+  "default_tcga": [],
+  "default_CRUK": ["Anal cancer"]
+},
+
+"C21.8 Overlapping lesion of rectum, anus and anal canal": {
+  "default_tcga": [],
+  "default_CRUK": ["Anal cancer"]
+},
+
+"C23 Gallbladder": {
+  "default_tcga": [],
+  "default_CRUK": ["Gallbladder cancer"]
+},
+
+"C23.9 Gallbladder": {
+  "default_tcga": [],
+  "default_CRUK": ["Gallbladder cancer"]
+
+},
+
+"C24 Other and unspecified parts of biliary tract": {
+  "default_tcga": [],
+  "default_CRUK": ["Bile duct cancer"]
+},
+
+"C24.0 Extrahepatic bile duct": {
+  "default_tcga": [],
+  "default_CRUK": ["Bile duct cancer"]
+},
+
+"C24.8 Overlapping lesion of biliary tract": {
+  "default_tcga": [],
+  "default_CRUK": ["Bile duct cancer"]
+},
+
+"C24.9 Biliary tract, nos": {
+  "default_tcga": [],
+  "default_CRUK": ["Bile duct cancer"]
+},
+
+"C26 Other and ill-defined digestive organs": {
+  "default_tcga": [],
+  "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
+},
+
+"C26.0 Intestinal tract, nos": {
+  "default_tcga": [],
+  "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
+},
+
+"C26.8 Overlapping lesion of digestive system": {
+  "default_tcga": [],
+  "default_CRUK": ["Small bowel cancer", "Bowel cancer", "Colorectal cancer"]
+},
+
+"C26.9 Gastrointestinal tract, nos": {
+  "default_tcga": [],
+  "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
+},
+"C30 Nasal cavity and middle ear": {
+  "default_tcga": [],
+  "default_CRUK": ["Nasal and paranasal sinus cancer"]
+},
+
+"C30.0 Nasal cavity": {
+  "default_tcga": [],
+  "default_CRUK": ["Nasal and paranasal sinus cancer"]
+},
+
+"C30.1 Middle ear": {
+  "default_tcga": [],
+  "default_CRUK": ["Ear cancer"]
+},
+
+"C30-C39 Respiratory system and intrathoracic organs": {
+  "default_tcga": [],
+  "default_CRUK": ["Lung cancer"]
+
+    },
+    
+"C32 Larynx": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Laryngeal cancer"]
+},
+
+"C32.0 Glottis": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Laryngeal cancer"]
+},
+
+"C32.1 Supraglottis": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Laryngeal cancer"]
+},
+
+"C32.2 Subglottis": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Laryngeal cancer"]
+},
+
+"C32.3 Laryngeal cartilage": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Laryngeal cancer"]
+},
+
+"C32.8 Overlapping lesion of larynx": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Laryngeal cancer"]
+},
+
+"C32.9 Larynx, nos": {
+  "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
+  "default_CRUK": ["Laryngeal cancer"]
+
+},
+
+"C33 Trachea": {
+  "default_tcga": [],
+  "default_CRUK": ["Lung cancer"]
+},
+
+"C33.9 Trachea": {
+  "default_tcga": [],
+  "default_CRUK": ["Lung cancer"]
+},
+
+"C37 Thymus": {
+  "default_tcga": ["THYM (Thymoma)"],
+  "default_CRUK": ["Thymus gland tumours"]
+},
+
+"C39 Other and ill-defined sites within respiratory system and intrathoracic organs": {
+  "default_tcga": [],
+  "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
+},
+
+"C39.0 Upper respiratory tract, nos": {
+  "default_tcga": [],
+  "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
+},
+
+"C39.8 Overlapping lesion of respiratory system and intrathoracic organs": {
+  "default_tcga": [],
+  "default_CRUK": ["Lung cancer", "Thymus gland tumours"]
+},
+
+"C39.9 Ill-defined sites within respiratory system": {
+  "default_tcga": [],
+  "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
+},
+
+"C50 Breast": {
+  "default_tcga": ["BRCA (Breast invasive carcinoma)"],
+  "default_CRUK": ["Breast cancer"]
     },
 
-    "C07 Parotid gland": {
-      "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
-      "default_CRUK": ["Salivary gland cancer"]
-    },
-
-    "C09 Tonsil": {
-      "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
-      "default_CRUK": ["Tonsil cancer"]
-    },
-
-    "C11 Nasopharynx": {
-      "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
-      "default_CRUK": ["Nasopharyngeal cancer"]
-    },
-
-    "C15 Esophagus": {
-      "default_tcga": ["ESCA (Esophageal carcinoma)"],
-      "default_CRUK": ["Oesophageal cancer"]
-    },
-
-    "C16 Stomach": {
-      "default_tcga": ["STAD (Stomach adenocarcinoma)"],
-      "default_CRUK": ["Gastric cancer"]
-    },
-
-    "C18 Colon": {
-      "default_tcga": ["COAD (Colon adenocarcinoma)"],
-      "default_CRUK": ["Colorectal cancer"]
-    },
-
-    "C20 Rectum": {
-      "default_tcga": ["READ (Rectum adenocarcinoma)"],
-      "default_CRUK": ["Rectal cancer"]
-    },
-
-    "C21 Anus": {
-      "default_tcga": [],
-      "default_CRUK": ["Anal cancer"]
-    },
-
-    "C23 Gallbladder": {
-      "default_tcga": [],
-      "default_CRUK": ["Gallbladder cancer"]
-    },
-
-    "C26 Other and ill-defined digestive organs": {
-      "default_tcga": [],
-      "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
-    },
-
-    "C26.0 Intestinal tract, nos": {
-      "default_tcga": [],
-      "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
-    },
-
-    "C26.8 Overlapping lesion of digestive system": {
-      "default_tcga": [],
-      "default_CRUK": ["Small bowel cancer", "Bowel cancer", "Colorectal cancer"]
-    },
-
-    "C26.9 Gastrointestinal tract, nos": {
-      "default_tcga": [],
-      "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
-    },
-
-    "C32 Larynx": {
-      "default_tcga": ["HNSC (Head and Neck Squamous Cell Carcinoma)"],
-      "default_CRUK": ["Laryngeal cancer"]
-    },
-
-    "C33 Trachea": {
-      "default_tcga": [],
-      "default_CRUK": ["Lung cancer"]
-    },
-
-    "C33.9 Trachea": {
-      "default_tcga": [],
-      "default_CRUK": ["Lung cancer"]
-    },
-
-    "C37 Thymus": {
-      "default_tcga": ["THYM (Thymoma)"],
-      "default_CRUK": ["Thymus gland tumours"]
-    },
-
-    "C39 Other and ill-defined sites within respiratory system and intrathoracic organs": {
-      "default_tcga": [],
-      "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
-    },
-
-    "C39.0 Upper respiratory tract, nos": {
-      "default_tcga": [],
-      "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
-    },
-
-    "C39.8 Overlapping lesion of respiratory system and intrathoracic organs": {
-      "default_tcga": [],
-      "default_CRUK": ["Lung cancer", "Thymus gland tumours"]
-    },
-
-    "C39.9 Ill-defined sites within respiratory system": {
-      "default_tcga": [],
-      "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
-    },
-
-    "C50 Breast": {
+    "C50.0 Nipple": {
       "default_tcga": ["BRCA (Breast invasive carcinoma)"],
       "default_CRUK": ["Breast cancer"]
     },
 
-    "C53 Cervix uteri": {
-      "default_tcga": ["CESC (Cervical squamous cell carcinoma and endocervical adenocarcinoma)"],
-      "default_CRUK": ["Cervical cancer"]
+    "C50.1 Central portion of breast": {
+      "default_tcga": ["BRCA (Breast invasive carcinoma)"],
+      "default_CRUK": ["Breast cancer"]
     },
 
-    "C54 Corpus uteri": {
-      "default_tcga": ["UCEC (Uterine Corpus Endometrial Carcinoma)"],
-      "default_CRUK": ["Endometrial cancer"]
+    "C50.2 Upper-inner quadrant of breast": {
+      "default_tcga": ["BRCA (Breast invasive carcinoma)"],
+      "default_CRUK": ["Breast cancer"]
     },
 
-    "C56 Ovary": {
-      "default_tcga": ["OV (Ovarian serous cystadenocarcinoma)"],
-      "default_CRUK": ["Ovarian cancer"]
+    "C50.3 Lower-inner quadrant of breast": {
+      "default_tcga": ["BRCA (Breast invasive carcinoma)"],
+      "default_CRUK": ["Breast cancer"]
     },
 
-    "C60 Penis": {
-      "default_tcga": [],
-      "default_CRUK": ["Penile cancer"]
+    "C50.4 Upper-outer quadrant of breast": {
+      "default_tcga": ["BRCA (Breast invasive carcinoma)"],
+      "default_CRUK": ["Breast cancer"]
     },
 
-    "C61 Prostate gland": {
-      "default_tcga": ["PRAD (Prostate adenocarcinoma)"],
-      "default_CRUK": ["Prostate cancer"]
+    "C50.5 Lower-outer quadrant of breast": {
+      "default_tcga": ["BRCA (Breast invasive carcinoma)"],
+      "default_CRUK": ["Breast cancer"]
     },
 
-    "C62 Testis": {
-      "default_tcga": ["TGCT (Testicular Germ Cell Tumors)"],
-      "default_CRUK": ["Testicular cancer"]
+    "C50.6 Axillary tail of breast": {
+      "default_tcga": ["BRCA (Breast invasive carcinoma)"],
+      "default_CRUK": ["Breast cancer"]
     },
 
+    "C50.8 Overlapping lesion of breast": {
+      "default_tcga": ["BRCA (Breast invasive carcinoma)"],
+      "default_CRUK": ["Breast cancer"]
+    },
+
+    "C50.9 Breast, nos": {
+      "default_tcga": ["BRCA (Breast invasive carcinoma)"],
+      "default_CRUK": ["Breast cancer"]
+    
+},
+
+"C53 Cervix uteri": {
+  "default_tcga": ["CESC (Cervical squamous cell carcinoma and endocervical adenocarcinoma)"],
+  "default_CRUK": ["Cervical cancer"]
+},
+
+"C53.0 Endocervix": {
+  "default_tcga": ["CESC (Cervical squamous cell carcinoma and endocervical adenocarcinoma)"],
+  "default_CRUK": ["Cervical cancer"]
+},
+
+"C53.1 Exocervix": {
+  "default_tcga": ["CESC (Cervical squamous cell carcinoma and endocervical adenocarcinoma)"],
+  "default_CRUK": ["Cervical cancer"]
+},
+
+"C53.8 Overlapping lesion of cervix uteri": {
+  "default_tcga": ["CESC (Cervical squamous cell carcinoma and endocervical adenocarcinoma)"],
+  "default_CRUK": ["Cervical cancer"]
+},
+
+"C53.9 Cervix uteri": {
+  "default_tcga": ["CESC (Cervical squamous cell carcinoma and endocervical adenocarcinoma)"],
+  "default_CRUK": ["Cervical cancer"]
+
+},
+
+"C54 Corpus uteri": {
+  "default_tcga": ["UCEC (Uterine Corpus Endometrial Carcinoma)"],
+  "default_CRUK": ["Endometrial cancer"]
+},
+
+"C54.0 Isthmus uteri": {
+  "default_tcga": ["UCEC (Uterine Corpus Endometrial Carcinoma)"],
+  "default_CRUK": ["Endometrial cancer"]
+},
+
+"C54.1 Endometrium": {
+  "default_tcga": ["UCEC (Uterine Corpus Endometrial Carcinoma)"],
+  "default_CRUK": ["Endometrial cancer"]
+},
+
+"C54.2 Myometrium": {
+  "default_tcga": ["UCEC (Uterine Corpus Endometrial Carcinoma)"],
+  "default_CRUK": ["Endometrial cancer"]
+},
+
+"C54.3 Fundus uteri": {
+  "default_tcga": ["UCEC (Uterine Corpus Endometrial Carcinoma)"],
+  "default_CRUK": ["Endometrial cancer"]
+},
+
+"C54.8 Overlapping lesion of corpus uteri": {
+  "default_tcga": ["UCEC (Uterine Corpus Endometrial Carcinoma)"],
+  "default_CRUK": ["Endometrial cancer"]
+},
+
+"C54.9 Corpus uteri": {
+  "default_tcga": ["UCEC (Uterine Corpus Endometrial Carcinoma)"],
+  "default_CRUK": ["Endometrial cancer"]
+  
+},
+
+"C56 Ovary": {
+  "default_tcga": ["OV (Ovarian serous cystadenocarcinoma)"],
+  "default_CRUK": ["Ovarian cancer"]
+},
+
+"C60 Penis": {
+  "default_tcga": [],
+  "default_CRUK": ["Penile cancer"]
+},
+
+"C61 Prostate gland": {
+  "default_tcga": ["PRAD (Prostate adenocarcinoma)"],
+  "default_CRUK": ["Prostate cancer"]
+},
+
+"C62 Testis": {
+  "default_tcga": ["TGCT (Testicular Germ Cell Tumors)"],
+  "default_CRUK": ["Testicular cancer"]
+},
+"C64-C68 Urinary tract": {
+  "default_tcga": [],
+  "default_CRUK": [
+    "Kidney cancer",
+    "Bladder cancer",
+    "Upper urinary tract urothelial cancer"
+  ]
+},
     "C67 Bladder": {
       "default_tcga": ["BLCA (Bladder Urothelial Carcinoma)"],
       "default_CRUK": ["Bladder cancer"]
     },
 
-    "C73 Thyroid gland": {
-      "default_tcga": ["THCA (Thyroid carcinoma)"],
+    "C67.0 Trigone of bladder": {
+      "default_tcga": ["BLCA (Bladder Urothelial Carcinoma)"],
+      "default_CRUK": ["Bladder cancer"]
+    },
+
+    "C67.1 Dome of bladder": {
+      "default_tcga": ["BLCA (Bladder Urothelial Carcinoma)"],
+      "default_CRUK": ["Bladder cancer"]
+    },
+
+    "C67.2 Lateral wall of bladder": {
+      "default_tcga": ["BLCA (Bladder Urothelial Carcinoma)"],
+      "default_CRUK": ["Bladder cancer"]
+    },
+
+    "C67.3 Anterior wall of bladder": {
+      "default_tcga": ["BLCA (Bladder Urothelial Carcinoma)"],
+      "default_CRUK": ["Bladder cancer"]
+    },
+
+    "C67.4 Posterior wall of bladder": {
+      "default_tcga": ["BLCA (Bladder Urothelial Carcinoma)"],
+      "default_CRUK": ["Bladder cancer"]
+    },
+
+    "C67.5 Bladder neck": {
+      "default_tcga": ["BLCA (Bladder Urothelial Carcinoma)"],
+      "default_CRUK": ["Bladder cancer"]
+    },
+
+    "C67.6 Ureteric orifice": {
+      "default_tcga": ["BLCA (Bladder Urothelial Carcinoma)"],
+      "default_CRUK": ["Bladder cancer"]
+    },
+
+    "C67.7 Urachus": {
+      "default_tcga": ["BLCA (Bladder Urothelial Carcinoma)"],
+      "default_CRUK": ["Bladder cancer"]
+    },
+
+    "C67.8 Overlapping lesion of bladder": {
+      "default_tcga": ["BLCA (Bladder Urothelial Carcinoma)"],
+      "default_CRUK": ["Bladder cancer"]
+    },
+
+    "C67.9 Bladder, nos": {
+      "default_tcga": ["BLCA (Bladder Urothelial Carcinoma)"],
+      "default_CRUK": ["Bladder cancer"]
+    },
+    "C73-C75 Thyroid and other endocrine glands": {
+      "default_tcga": [],
       "default_CRUK": ["Thyroid cancer"]
-    },
+},
+"C73 Thyroid gland": {
+  "default_tcga": ["THCA (Thyroid carcinoma)"],
+  "default_CRUK": ["Thyroid cancer"]
+},
 
-    "C76 Other and ill-defined sites": {
-      "default_tcga": [],
-      "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
-    },
+"C74 Adrenal gland": {
+  "default_tcga": [],
+  "default_CRUK": ["Adrenal gland tumours"]
+},
 
-    "C76.0 Head, face or neck, nos": {
-      "default_tcga": [],
-      "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
-    },
+"C74.0 Cortex of adrenal gland": {
+  "default_tcga": [],
+  "default_CRUK": ["Adrenal gland tumours"]
+},
 
-    "C76.1 Thorax, nos": {
-      "default_tcga": [],
-      "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
-    },
+"C74.1 Medulla of adrenal gland": {
+  "default_tcga": [],
+  "default_CRUK": ["Adrenal gland tumours"]
+},
 
-    "C76.2 Abdomen, nos": {
-      "default_tcga": [],
-      "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
-    },
+"C74.9 Adrenal gland, nos": {
+  "default_tcga": [],
+  "default_CRUK": ["Adrenal gland tumours"]
+},
 
-    "C76.3 Pelvis, nos": {
-      "default_tcga": [],
-      "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
-    },
+"C76 Other and ill-defined sites": {
+  "default_tcga": [],
+  "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
+},
 
-    "C76.4 Upper limb, nos": {
-      "default_tcga": [],
-      "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
-    },
+"C76.0 Head, face or neck, nos": {
+  "default_tcga": [],
+  "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
+},
 
-    "C76.5 Lower limb, nos": {
-      "default_tcga": [],
-      "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
-    },
+"C76.1 Thorax, nos": {
+  "default_tcga": [],
+  "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
+},
 
-    "C76.7 Other ill-defined sites": {
-      "default_tcga": [],
-      "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
-    },
+"C76.2 Abdomen, nos": {
+  "default_tcga": [],
+  "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
+},
 
-    "C76.8 Overlapping lesion of ill-defined sites": {
-      "default_tcga": [],
-      "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
-    },
+"C76.3 Pelvis, nos": {
+  "default_tcga": [],
+  "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
+},
 
-    "C77 Lymph nodes": {
-      "default_tcga": [],
-      "default_CRUK": ["Secondary cancer"]
-    },
+"C76.4 Upper limb, nos": {
+  "default_tcga": [],
+  "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
+},
 
-    "C77.0 Lymph nodes of head, face and neck": {
-      "default_tcga": [],
-      "default_CRUK": ["Secondary cancer"]
-    },
+"C76.5 Lower limb, nos": {
+  "default_tcga": [],
+  "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
+},
 
-    "C77.1 Intrathoracic lymph nodes": {
-      "default_tcga": [],
-      "default_CRUK": ["Secondary cancer"]
-    },
+"C76.7 Other ill-defined sites": {
+  "default_tcga": [],
+  "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
+},
 
-    "C77.2 Intra-abdominal lymph nodes": {
-      "default_tcga": [],
-      "default_CRUK": ["Secondary cancer"]
-    },
+"C76.8 Overlapping lesion of ill-defined sites": {
+  "default_tcga": [],
+  "default_CRUK": ["Unknown primary cancer", "Cancer of unknown primary (CUP)"]
+},
 
-    "C77.3 Lymph nodes of axilla or arm": {
-      "default_tcga": [],
-      "default_CRUK": ["Secondary cancer"]
-    },
+"C77 Lymph nodes": {
+  "default_tcga": [],
+  "default_CRUK": ["Secondary cancer"]
+},
 
-    "C77.4 Lymph nodes of inguinal region or leg": {
-      "default_tcga": [],
-      "default_CRUK": ["Secondary cancer"]
-    },
+"C77.0 Lymph nodes of head, face and neck": {
+  "default_tcga": [],
+  "default_CRUK": ["Secondary cancer"]
+},
 
-    "C77.5 Pelvic lymph nodes": {
-      "default_tcga": [],
-      "default_CRUK": ["Secondary cancer"]
-    },
+"C77.1 Intrathoracic lymph nodes": {
+  "default_tcga": [],
+  "default_CRUK": ["Secondary cancer"]
+},
 
-    "C77.8 Lymph nodes of multiple regions": {
-      "default_tcga": [],
-      "default_CRUK": ["Secondary cancer"]
-    },
+"C77.2 Intra-abdominal lymph nodes": {
+  "default_tcga": [],
+  "default_CRUK": ["Secondary cancer"]
+},
 
-    "C77.9 Lymph node, nos": {
-      "default_tcga": [],
-      "default_CRUK": ["Secondary cancer"]
-    }
-  }
+"C77.3 Lymph nodes of axilla or arm": {
+  "default_tcga": [],
+  "default_CRUK": ["Secondary cancer"]
+},
+
+"C77.4 Lymph nodes of inguinal region or leg": {
+  "default_tcga": [],
+  "default_CRUK": ["Secondary cancer"]
+},
+
+"C77.5 Pelvic lymph nodes": {
+  "default_tcga": [],
+  "default_CRUK": ["Secondary cancer"]
+},
+
+"C77.8 Lymph nodes of multiple regions": {
+  "default_tcga": [],
+  "default_CRUK": ["Secondary cancer"]
+},
+
+"C77.9 Lymph node, nos": {
+  "default_tcga": [],
+  "default_CRUK": ["Secondary cancer"]
+}
+
+}
 }

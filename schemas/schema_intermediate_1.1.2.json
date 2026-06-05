@@ -54,7 +54,13 @@
                 }
             ]
         },
-
+        "C69-C72 Eye, brain and other parts of central nervous system": {
+        "default_tcga": null,
+        "default_CRUK": [
+            "Brain tumours"
+        ],
+        "overrides": []
+    },
         "C70 Meninges": {
             "default_tcga": null,
             "default_CRUK": [

@@ -34,6 +34,7 @@
                 "C69.4 Ciliary body",
                 "C69.5 Lacrimal gland",
                 "C69.6 Orbit, NOS",
+                "C69.8 Overlapping lesion of eye and adnexa",
                 "C69.9 Eye, NOS"
             ],
             "return_CRUK": ["Eye cancer"]

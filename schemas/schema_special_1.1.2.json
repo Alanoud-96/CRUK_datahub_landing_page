@@ -25,7 +25,13 @@
             "rule_name": "small_bowel_nets",
             "match_type": "topography_exact_and_histology_exact",
             "topography_exact": [
-                "C17 Small intestine"
+                "C17 Small intestine",
+                "C17.0 Duodenum",
+                "C17.1 Jejunum",
+                "C17.2 Ileum",
+                "C17.3 Meckel diverticulum",
+                "C17.8 Overlapping lesion of small intestine",
+                "C17.9 Small intestine, nos"
             ],
             "histology_exact": [
                 "8154/3 Mixed neuroendocrine non-neuroendocrine neoplasm (MiNEN)",
@@ -47,20 +53,29 @@
             "rule_name": "small_intestine_general",
             "match_type": "topography_exact",
             "topography_exact": [
-                "C17 Small intestine"
+                "C17 Small intestine",
+                "C17.0 Duodenum",
+                "C17.1 Jejunum",
+                "C17.2 Ileum",
+                "C17.3 Meckel diverticulum",
+                "C17.8 Overlapping lesion of small intestine",
+                "C17.9 Small intestine, nos"
             ],
             "return_CRUK": [
-                "Colorectal cancer"
+                "Colorectal cancer",
+                "Bowel cancer"
             ]
         },
         {
             "rule_name": "rectosigmoid_general",
             "match_type": "topography_exact",
             "topography_exact": [
-                "C19 Rectosigmoid junction"
+                "C19 Rectosigmoid junction",
+                "C19.9 Rectosigmoid junction"
             ],
             "return_CRUK": [
-                "Colorectal cancer"
+                "Colorectal cancer",
+                "Bowel cancer"
             ]
         },
         {
@@ -98,7 +113,12 @@
             "rule_name": "blood_cancers_by_topography",
             "match_type": "topography_exact",
             "topography_exact": [
-                "C42 Hematopoietic and reticuloendothelial systems"
+                "C42 Hematopoietic and reticuloendothelial systems",
+                "C42.0 Blood",
+                "C42.1 Bone marrow",
+                "C42.2 Spleen",
+                "C42.3 Reticuloendothelial system, nos",
+                "C42.4 Hematopoietic system, nos"
             ],
             "return_CRUK": [
                 "Blood cancers"
@@ -515,7 +535,9 @@
             "rule_name": "unknown_primary_by_topography",
             "match_type": "topography_exact",
             "topography_exact": [
-                "C80 Unknown primary site"
+                "C80 Unknown primary site",
+                "C80.9 Unknown primary site"
+        
             ],
             "return_CRUK": [
                 "Cancer of unknown primary (CUP)"
