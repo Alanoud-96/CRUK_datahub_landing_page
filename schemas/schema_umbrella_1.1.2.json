@@ -1,0 +1,68 @@
+    {
+    "umbrella_mappings": {
+            "C00-C14 Lip, oral cavity and pharynx": {
+        "default_CRUK": [
+        "Head and neck cancer",
+        "Mouth and oropharyngeal cancer",
+        "Nasopharyngeal cancer",
+        "Salivary gland cancer",
+        "Tongue cancer",
+        "Tonsil cancer"
+    ],
+    "default_tcga": []
+    },
+
+        "C15-C26 Digestive organs": {
+        "default_CRUK": [
+            "Oesophageal cancer",
+            "Stomach cancer",
+            "Small bowel cancer",
+            "Bowel cancer",
+            "Colorectal cancer",
+            "Anal cancer",
+            "Liver cancer",
+            "Gallbladder cancer",
+            "Bile duct cancer",
+            "Pancreatic cancer"
+        ],
+        "default_tcga": []
+        },
+
+        "C30-C39 Respiratory system and intrathoracic organs": {
+        "default_CRUK": [
+            "Nasal and paranasal sinus cancer",
+            "Laryngeal cancer",
+            "Lung cancer",
+            "Mesothelioma",
+            "Thymus gland tumours"
+        ],
+        "default_tcga": []
+        },
+
+        "C40-C41 Bones, joints and articular cartilage": {
+        "default_CRUK": [
+            "Bone cancer"
+        ],
+        "default_tcga": []
+        },
+
+        "C69-C72 Eye, brain and other parts of central nervous system": {
+        "default_CRUK": [
+            "Eye cancer",
+            "Brain tumours",
+            "Spinal cord tumours"
+        ],
+        "default_tcga": []
+        },
+
+        "C73-C75 Thyroid and other endocrine glands": {
+        "default_CRUK": [
+        "Thyroid cancer",
+        "Adrenal gland tumours",
+        "Neuroendocrine tumours",
+        "Phaeochromocytoma"
+    ],
+    "default_tcga": []
+    }
+    }
+    }
