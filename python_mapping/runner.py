@@ -119,16 +119,22 @@ def build_dataset_context(
     if histology:
         dataset_filters.append(
             {
-                "id": None, "label": histology, "category": "histology",
-                "primaryGroup": "cancer-type", "description": "",
+                "id": None,
+                "label": histology,
+                "category": "histology",
+                "primaryGroup": "cancer-type",
+                "description": "",
             }
         )
     if existing_cruk_labels:
         for label in existing_cruk_labels:
             dataset_filters.append(
                 {
-                    "id": None, "label": label, "category": "crukTerms",
-                    "primaryGroup": "cancer-type", "description": "",
+                    "id": None,
+                    "label": label,
+                    "category": "crukTerms",
+                    "primaryGroup": "cancer-type",
+                    "description": "",
                     "isGenerated": True,
                 }
             )
@@ -138,6 +144,7 @@ def build_dataset_context(
 def unpack_mapping_response(response: Any) -> MappingResult:
     if not isinstance(response, tuple):
         return MappingResult()
+
     if len(response) == 3:
         matched_term, cruk_terms, tcga_terms = response
         return MappingResult(
@@ -146,6 +153,7 @@ def unpack_mapping_response(response: Any) -> MappingResult:
             cruk_terms=ensure_list_of_objects(cruk_terms),
             tcga_terms=ensure_list_of_objects(tcga_terms),
         )
+
     if len(response) == 4:
         matched_term, matched_rule, cruk_terms, tcga_terms = response
         return MappingResult(
@@ -154,6 +162,7 @@ def unpack_mapping_response(response: Any) -> MappingResult:
             cruk_terms=ensure_list_of_objects(cruk_terms),
             tcga_terms=ensure_list_of_objects(tcga_terms),
         )
+
     return MappingResult()
 
 
@@ -163,7 +172,7 @@ def unpack_mapping_response(response: Any) -> MappingResult:
 class MappingStrategy(ABC):
     def __init__(self, name: str, shared_data: Dict[str, Any]):
         self.name = name
-        self.shared_data = shared_data  # e.g. loaded JSON lookups, mapping functions
+        self.shared_data = shared_data
 
     def is_available(self) -> bool:
         return True
@@ -175,6 +184,22 @@ class MappingStrategy(ABC):
     def map_term(self, term: Dict[str, Any], context: Dict[str, Any]) -> MappingResult:
         """Executes the specific mapping logic for this stage."""
         pass
+
+
+class UmbrellaMappingStrategy(MappingStrategy):
+    def __init__(self, shared_data: Dict[str, Any]):
+        super().__init__("umbrella", shared_data)
+
+    def is_available(self) -> bool:
+        return self.shared_data.get("get_umbrella_mapped_terms") is not None
+
+    def get_import_error(self) -> Optional[str]:
+        return self.shared_data.get("umbrella_import_error")
+
+    def map_term(self, term: Dict[str, Any], context: Dict[str, Any]) -> MappingResult:
+        get_umbrella_mapped_terms = self.shared_data.get("get_umbrella_mapped_terms")
+        response = get_umbrella_mapped_terms(term)
+        return unpack_mapping_response(response)
 
 
 class SimpleMappingStrategy(MappingStrategy):
@@ -330,7 +355,7 @@ class MappingPipeline:
 
         if remaining_terms:
             problem = (
-                f"{len(remaining_terms)} term(s) remained unmatched after simple, intermediate, "
+                f"{len(remaining_terms)} term(s) remained unmatched after umbrella, simple, intermediate, "
                 f"complex, special, and rare."
             )
             encountered_problems.append(problem)
@@ -361,11 +386,19 @@ def load_shared_data() -> Dict[str, Any]:
         "get_mapped_terms":              get_mapped_terms,
         "get_intermediate_mapped_terms": get_intermediate_mapped_terms,
         "get_complex_mapped_terms":      get_complex_mapped_terms,
+        "get_umbrella_mapped_terms":     None,
+        "umbrella_import_error":         None,
         "get_special_mapped_terms":      None,
         "special_import_error":          None,
         "get_rare_mapped_terms":         None,
         "rare_import_error":             None,
     }
+
+    try:
+        from mapping_program_umbrella import get_mapped_terms as get_umbrella_mapped_terms
+        shared["get_umbrella_mapped_terms"] = get_umbrella_mapped_terms
+    except Exception as exc:
+        shared["umbrella_import_error"] = str(exc)
 
     try:
         from mapping_program_special import get_special_mapped_terms
@@ -411,7 +444,7 @@ def run_runner_pipeline(
     if male_detected and "Men's cancer" not in existing_cruk_labels:
         existing_cruk_labels.append("Men's cancer")
 
-    # --- Global context dict (Gemini-style plain dict) ---
+    # --- Global context dict ---
     global_context: Dict[str, Any] = {
         "histology_label":      histology_label,
         "existing_cruk_labels": existing_cruk_labels,
@@ -431,6 +464,7 @@ def run_runner_pipeline(
     shared_data = load_shared_data()
 
     pipeline = MappingPipeline([
+        UmbrellaMappingStrategy(shared_data),
         SimpleMappingStrategy(shared_data),
         IntermediateMappingStrategy(shared_data),
         ComplexMappingStrategy(shared_data),
@@ -460,7 +494,7 @@ def run_runner_pipeline(
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Run simple -> intermediate -> complex -> special -> rare mapping pipeline."
+        description="Run umbrella -> simple -> intermediate -> complex -> special -> rare mapping pipeline."
     )
     parser.add_argument("--label",    required=True, help='ICD-O topography label, e.g. "C64 Kidney"')
     parser.add_argument("--category", default="icdOTopography", help="Input term category")
@@ -475,8 +509,11 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     input_term = {
-        "id": None, "label": args.label, "category": args.category,
-        "primaryGroup": "cancer-type", "description": "",
+        "id": None,
+        "label": args.label,
+        "category": args.category,
+        "primaryGroup": "cancer-type",
+        "description": "",
     }
 
     output_data = run_runner_pipeline(
@@ -491,3 +528,4 @@ if __name__ == "__main__":
         logger.info("Saved output to %s", args.output)
     else:
         print(json.dumps(output_data, indent=2, ensure_ascii=False))
+
