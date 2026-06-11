@@ -465,10 +465,10 @@ def run_runner_pipeline(
 
     pipeline = MappingPipeline([
         UmbrellaMappingStrategy(shared_data),
-        SimpleMappingStrategy(shared_data),
         IntermediateMappingStrategy(shared_data),
         ComplexMappingStrategy(shared_data),
         SpecialMappingStrategy(shared_data),
+        SimpleMappingStrategy(shared_data),
         RareMappingStrategy(shared_data),
     ])
 
@@ -494,7 +494,7 @@ def run_runner_pipeline(
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Run umbrella -> simple -> intermediate -> complex -> special -> rare mapping pipeline."
+        description="Run umbrella -> intermediate -> complex -> special -> simple -> rare mapping pipeline."
     )
     parser.add_argument("--label",    required=True, help='ICD-O topography label, e.g. "C64 Kidney"')
     parser.add_argument("--category", default="icdOTopography", help="Input term category")

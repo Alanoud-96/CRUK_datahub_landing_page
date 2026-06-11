@@ -21,32 +21,67 @@ ICD_O_MORPHOLOGY_PATTERN = re.compile(r"^\d{4}/\d")
 def extract_dataset_context(payload):
     dataset_filters = payload.get("datasetFilters", [])
 
-    input_terms = []
-    histology = None
     existing_cruk_labels = []
     age_range_max = None
+
+    topography_candidates = []
+    topography_parent_labels = set()
+
+    histology_specific_candidates = []
+    histology_group_candidates = []
 
     for item in dataset_filters:
         category = item.get("category")
         label = item.get("label")
+        item_id = item.get("id") or ""
 
-        if category == "icdOTopography":
-            input_terms.append({
+        # ICD-O topography terms can appear either as parent terms
+        # with category "icdOTopography", or as child terms with ids
+        # beginning with 0_0_0_ and category set to the parent label.
+        if category == "icdOTopography" or item_id.startswith("0_0_0_"):
+            topography_candidates.append({
                 "id": item.get("id"),
                 "label": label,
-                "category": category,
+                "category": "icdOTopography",
                 "primaryGroup": item.get("primaryGroup", "cancer-type"),
                 "description": item.get("description", "")
             })
 
-        elif (
-            category in {"histology", "icdOHistology", "icdOMorphology"}
-            or (label and ICD_O_MORPHOLOGY_PATTERN.match(label))
-        ) and not histology:
-            histology = label
+            if category == "icdOTopography" and label:
+                topography_parent_labels.add(label)
+
+        # Prefer the specific ICD-O morphology/histology code if present,
+        # e.g. 8310/3 Clear cell adenocarcinoma, rather than the parent group.
+        if label and ICD_O_MORPHOLOGY_PATTERN.match(label):
+            histology_specific_candidates.append(label)
+
+        elif category in {"histology", "icdOHistology", "icdOMorphology"} and label:
+            histology_group_candidates.append(label)
 
         elif category == "crukTerms" and label and not item.get("isGenerated"):
             existing_cruk_labels.append(label)
+
+    # If both a parent topography and a child topography are selected,
+    # keep the child term and remove the broader parent term.
+    parent_labels_used_by_children = {
+        item.get("category")
+        for item in dataset_filters
+        if item.get("category") in topography_parent_labels
+    }
+
+    input_terms = [
+        term for term in topography_candidates
+        if term.get("label") not in parent_labels_used_by_children
+    ]
+
+    if not input_terms:
+        input_terms = topography_candidates
+
+    histology = (
+        histology_specific_candidates[0]
+        if histology_specific_candidates
+        else (histology_group_candidates[0] if histology_group_candidates else None)
+    )
 
     coverage = payload.get("coverage", {})
     age_range_max = coverage.get("typicalAgeRangeMax")

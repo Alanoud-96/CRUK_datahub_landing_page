@@ -12,7 +12,8 @@
             "overrides": [
                 {
                     "histology": [
-                        "8312/3 Renal cell carcinoma, NOS"
+                        "8312/3 Renal cell carcinoma, NOS",
+                        "8310/3 Clear cell adenocarcinoma, NOS"
                     ],
                     "tcga": "KIRC (Kidney renal clear cell carcinoma)"
                 },
@@ -30,7 +31,6 @@
                 }
             ]
         },
-
         "C34 Bronchus and lung": {
             "default_tcga": [
                 "LUAD (Lung adenocarcinoma)",
@@ -55,12 +55,12 @@
             ]
         },
         "C69-C72 Eye, brain and other parts of central nervous system": {
-        "default_tcga": null,
-        "default_CRUK": [
-            "Brain tumours"
-        ],
-        "overrides": []
-    },
+            "default_tcga": null,
+            "default_CRUK": [
+                "Brain tumours"
+            ],
+            "overrides": []
+        },
         "C70 Meninges": {
             "default_tcga": null,
             "default_CRUK": [
@@ -68,7 +68,6 @@
             ],
             "overrides": []
         },
-
         "C71 Brain": {
             "default_tcga": null,
             "default_CRUK": [
@@ -85,13 +84,14 @@
                 {
                     "histology": [
                         "9380/3 Glioma, malignant",
-                        "9401/3 Astrocytoma, anaplastic"
+                        "9401/3 Astrocytoma, anaplastic",
+                        "9400/3 Astrocytoma, NOS",
+                        "9450/3 Oligodendroglioma, NOS"
                     ],
                     "tcga": "LGG (Brain Lower Grade Glioma)"
                 }
             ]
         },
-
         "C22 Liver and intrahepatic bile ducts": {
             "default_tcga": null,
             "default_CRUK": [
@@ -112,7 +112,6 @@
                 }
             ]
         },
-
         "C25 Pancreas": {
             "default_tcga": null,
             "default_CRUK": [
@@ -128,7 +127,6 @@
                 }
             ]
         },
-
         "C54 Corpus uteri": {
             "default_tcga": null,
             "default_CRUK": [
@@ -151,7 +149,6 @@
                 }
             ]
         },
-
         "C55 Uterus, NOS": {
             "default_tcga": null,
             "default_CRUK": [
@@ -174,7 +171,6 @@
                 }
             ]
         },
-
         "C74 Adrenal gland": {
             "default_tcga": null,
             "default_CRUK": [
