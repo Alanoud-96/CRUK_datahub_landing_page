@@ -1,0 +1,89 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_5",
+      "label": "C44 Skin",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_15",
+      "label": "872-879 Nevi and melanomas",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "872-879 Nevi and melanomas",
+      "description": "",
+      "id": "0_0_1_15_3",
+      "label": "8721/3 Nodular melanoma",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_56",
+      "isGenerated": true,
+      "label": "Melanoma skin cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_29",
+      "isGenerated": true,
+      "label": "SKCM (Skin Cutaneous Melanoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8721/3 Nodular melanoma",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_56",
+            "label": "Melanoma skin cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_29",
+            "label": "SKCM (Skin Cutaneous Melanoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8721/3 Nodular melanoma",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_5",
+          "label": "C44 Skin",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "complex",
+        "matched_rule": "skin_melanoma",
+        "matched_schema_term": "SKCM",
+        "topography_label": "C44 Skin"
+      }
+    ],
+    "topography_labels": [
+      "C44 Skin"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T23:18:49.716Z"
+}

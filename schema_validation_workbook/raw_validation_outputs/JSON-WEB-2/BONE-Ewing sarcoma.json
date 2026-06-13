@@ -1,0 +1,80 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_3",
+      "label": "C40-C41 Bones, joints and articular cartilage",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C40-C41 Bones, joints and articular cartilage",
+      "description": "",
+      "id": "0_0_0_3_0",
+      "label": "C40 Bones, joints and articular cartilage of limbs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_34",
+      "label": "935-937 Miscellaneous tumors",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "935-937 Miscellaneous tumors",
+      "description": "",
+      "id": "0_0_1_34_6",
+      "label": "9364/3 Ewing sarcoma",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_11",
+      "isGenerated": true,
+      "label": "Bone cancer",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "9364/3 Ewing sarcoma",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_11",
+            "label": "Bone cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": "9364/3 Ewing sarcoma",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_3_0",
+          "label": "C40 Bones, joints and articular cartilage of limbs",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "complex",
+        "matched_rule": "bone_group",
+        "matched_schema_term": "BONE",
+        "topography_label": "C40 Bones, joints and articular cartilage of limbs"
+      }
+    ],
+    "topography_labels": [
+      "C40 Bones, joints and articular cartilage of limbs"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-11T15:34:44.926Z"
+}

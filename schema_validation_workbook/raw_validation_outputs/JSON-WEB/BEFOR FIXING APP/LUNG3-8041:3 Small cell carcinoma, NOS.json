@@ -1,0 +1,145 @@
+{
+  "coverage": {
+    "typicalAgeRangeMax": null
+  },
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_2",
+      "label": "C30-C39 Respiratory system and intrathoracic organs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C30-C39 Respiratory system and intrathoracic organs",
+      "description": "",
+      "id": "0_0_0_2_4",
+      "label": "C34 Bronchus and lung",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "801-804 Epithelial neoplasms, NOS",
+      "description": "",
+      "id": "0_0_1_1_23",
+      "label": "8041/3 Small cell carcinoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_65",
+      "isGenerated": true,
+      "label": "Nasal and paranasal sinus cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_48",
+      "isGenerated": true,
+      "label": "Laryngeal cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_51",
+      "isGenerated": true,
+      "label": "Lung cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_59",
+      "isGenerated": true,
+      "label": "Mesothelioma",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_98",
+      "isGenerated": true,
+      "label": "Thymus gland tumours",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8041/3 Small cell carcinoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_65",
+            "label": "Nasal and paranasal sinus cancer",
+            "primaryGroup": "cancer-type"
+          },
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_48",
+            "label": "Laryngeal cancer",
+            "primaryGroup": "cancer-type"
+          },
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_51",
+            "label": "Lung cancer",
+            "primaryGroup": "cancer-type"
+          },
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_59",
+            "label": "Mesothelioma",
+            "primaryGroup": "cancer-type"
+          },
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_98",
+            "label": "Thymus gland tumours",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": "8041/3 Small cell carcinoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_2",
+          "label": "C30-C39 Respiratory system and intrathoracic organs",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "umbrella",
+        "matched_rule": null,
+        "matched_schema_term": "C30-C39 Respiratory system and intrathoracic organs",
+        "topography_label": "C30-C39 Respiratory system and intrathoracic organs"
+      }
+    ],
+    "topography_labels": [
+      "C30-C39 Respiratory system and intrathoracic organs"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T20:11:15.667Z",
+  "summary": {
+    "datasetAliases": null,
+    "doiName": null,
+    "keywords": [
+      "",
+      ""
+    ],
+    "populationSize": 0
+  }
+}

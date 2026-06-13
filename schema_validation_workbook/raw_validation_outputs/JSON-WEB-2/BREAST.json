@@ -1,0 +1,89 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_9",
+      "label": "C50 Breast",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_16",
+      "label": "880 Soft tissue tumors and sarcomas, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "880 Soft tissue tumors and sarcomas, NOS",
+      "description": "",
+      "id": "0_0_1_16_1",
+      "label": "8800/3 Sarcoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_15",
+      "isGenerated": true,
+      "label": "Breast cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_2",
+      "isGenerated": true,
+      "label": "BRCA (Breast invasive carcinoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8800/3 Sarcoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_15",
+            "label": "Breast cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_2",
+            "label": "BRCA (Breast invasive carcinoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8800/3 Sarcoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_9",
+          "label": "C50 Breast",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "simple",
+        "matched_rule": null,
+        "matched_schema_term": "C50 Breast",
+        "topography_label": "C50 Breast"
+      }
+    ],
+    "topography_labels": [
+      "C50 Breast"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-10T16:37:05.294Z"
+}

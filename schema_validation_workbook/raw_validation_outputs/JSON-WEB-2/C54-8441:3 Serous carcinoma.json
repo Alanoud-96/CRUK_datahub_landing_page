@@ -1,0 +1,95 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_10",
+      "label": "C51-C58 Female genital organs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C51-C58 Female genital organs",
+      "description": "",
+      "id": "0_0_0_10_3",
+      "label": "C54 Corpus uteri",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_8",
+      "label": "844-849 Cystic, mucinous and serous neoplasms",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "844-849 Cystic, mucinous and serous neoplasms",
+      "description": "",
+      "id": "0_0_1_8_3",
+      "label": "8441/3 Serous carcinoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_109",
+      "isGenerated": true,
+      "label": "Womb cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_105",
+      "isGenerated": true,
+      "label": "Uterine cancer",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8441/3 Serous carcinoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_109",
+            "label": "Womb cancer",
+            "primaryGroup": "cancer-type"
+          },
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_105",
+            "label": "Uterine cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": "8441/3 Serous carcinoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_10_3",
+          "label": "C54 Corpus uteri",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "intermediate",
+        "matched_rule": null,
+        "matched_schema_term": "C54 Corpus uteri",
+        "topography_label": "C54 Corpus uteri"
+      }
+    ],
+    "topography_labels": [
+      "C54 Corpus uteri"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-11T15:48:58.236Z"
+}

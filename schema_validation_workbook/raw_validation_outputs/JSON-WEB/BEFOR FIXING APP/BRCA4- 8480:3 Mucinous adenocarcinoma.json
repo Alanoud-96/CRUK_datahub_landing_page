@@ -1,0 +1,94 @@
+{
+  "coverage": {
+    "typicalAgeRangeMax": null
+  },
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_9",
+      "label": "C50 Breast",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "844-849 Cystic, mucinous and serous neoplasms",
+      "description": "",
+      "id": "0_0_1_8_26",
+      "label": "8480/3 Mucinous adenocarcinoma",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_15",
+      "isGenerated": true,
+      "label": "Breast cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_2",
+      "isGenerated": true,
+      "label": "BRCA (Breast invasive carcinoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8480/3 Mucinous adenocarcinoma",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_15",
+            "label": "Breast cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_2",
+            "label": "BRCA (Breast invasive carcinoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8480/3 Mucinous adenocarcinoma",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_9",
+          "label": "C50 Breast",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "simple",
+        "matched_rule": null,
+        "matched_schema_term": "C50 Breast",
+        "topography_label": "C50 Breast"
+      }
+    ],
+    "topography_labels": [
+      "C50 Breast"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T19:56:59.711Z",
+  "summary": {
+    "datasetAliases": null,
+    "doiName": null,
+    "keywords": [
+      "",
+      ""
+    ],
+    "populationSize": 0
+  }
+}

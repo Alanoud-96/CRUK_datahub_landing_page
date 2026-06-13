@@ -1,0 +1,89 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_8",
+      "label": "C49 Connective, subcutaneous and other soft tissues",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_19",
+      "label": "885-888 Lipomatous neoplasms",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "885-888 Lipomatous neoplasms",
+      "description": "",
+      "id": "0_0_1_19_2",
+      "label": "8850/3 Liposarcoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_92",
+      "isGenerated": true,
+      "label": "Soft tissue sarcoma",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_28",
+      "isGenerated": true,
+      "label": "SARC (Sarcoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8850/3 Liposarcoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_92",
+            "label": "Soft tissue sarcoma",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_28",
+            "label": "SARC (Sarcoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8850/3 Liposarcoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_8",
+          "label": "C49 Connective, subcutaneous and other soft tissues",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "complex",
+        "matched_rule": "liposarcoma",
+        "matched_schema_term": "SARC",
+        "topography_label": "C49 Connective, subcutaneous and other soft tissues"
+      }
+    ],
+    "topography_labels": [
+      "C49 Connective, subcutaneous and other soft tissues"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-10T17:17:40.914Z"
+}

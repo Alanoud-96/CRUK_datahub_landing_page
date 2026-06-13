@@ -1,0 +1,110 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_3",
+      "label": "809-811 Basal cell neoplasms",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "809-811 Basal cell neoplasms",
+      "description": "",
+      "id": "0_0_1_3_4",
+      "label": "8094/3 Basosquamous carcinoma",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_11",
+      "label": "856-857 Complex epithelial neoplasms",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "856-857 Complex epithelial neoplasms",
+      "description": "",
+      "id": "0_0_1_11_1",
+      "label": "8560/3 Adenosquamous carcinoma",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_10",
+      "label": "C51-C58 Female genital organs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C51-C58 Female genital organs",
+      "description": "",
+      "id": "0_0_0_10_5",
+      "label": "C56 Ovary",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_74",
+      "isGenerated": true,
+      "label": "Ovarian cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_23",
+      "isGenerated": true,
+      "label": "OV (Ovarian serous cystadenocarcinoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8094/3 Basosquamous carcinoma",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_74",
+            "label": "Ovarian cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_23",
+            "label": "OV (Ovarian serous cystadenocarcinoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8094/3 Basosquamous carcinoma",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_10_5",
+          "label": "C56 Ovary",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "simple",
+        "matched_rule": null,
+        "matched_schema_term": "C56 Ovary",
+        "topography_label": "C56 Ovary"
+      }
+    ],
+    "topography_labels": [
+      "C56 Ovary"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-10T17:39:45.818Z"
+}

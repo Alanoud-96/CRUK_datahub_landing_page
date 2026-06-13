@@ -1,0 +1,96 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_10",
+      "label": "C51-C58 Female genital organs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C51-C58 Female genital organs",
+      "description": "",
+      "id": "0_0_0_10_2",
+      "label": "C53 Cervix uteri",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_2",
+      "label": "805-808 Squamous cell neoplasms",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "805-808 Squamous cell neoplasms",
+      "description": "",
+      "id": "0_0_1_2_14",
+      "label": "8070/3 Squamous cell carcinoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_23",
+      "isGenerated": true,
+      "label": "Cervical cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_3",
+      "isGenerated": true,
+      "label": "CESC (Cervical squamous cell carcinoma and endocervical adenocarcinoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8070/3 Squamous cell carcinoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_23",
+            "label": "Cervical cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_3",
+            "label": "CESC (Cervical squamous cell carcinoma and endocervical adenocarcinoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8070/3 Squamous cell carcinoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_10_2",
+          "label": "C53 Cervix uteri",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "simple",
+        "matched_rule": null,
+        "matched_schema_term": "C53 Cervix uteri",
+        "topography_label": "C53 Cervix uteri"
+      }
+    ],
+    "topography_labels": [
+      "C53 Cervix uteri"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T23:39:35.600Z"
+}

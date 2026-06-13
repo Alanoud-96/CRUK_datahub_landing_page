@@ -1,0 +1,122 @@
+{
+  "coverage": {
+    "typicalAgeRangeMax": null
+  },
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_13",
+      "label": "C69-C72 Eye, brain and other parts of central nervous system",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C69-C72 Eye, brain and other parts of central nervous system",
+      "description": "",
+      "id": "0_0_0_13_2",
+      "label": "C71 Brain",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_35",
+      "label": "938-948 Gliomas",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "938-948 Gliomas",
+      "description": "",
+      "id": "0_0_1_35_28",
+      "label": "9440/3 Glioblastoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_33",
+      "isGenerated": true,
+      "label": "Eye cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_13",
+      "isGenerated": true,
+      "label": "Brain tumours",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_93",
+      "isGenerated": true,
+      "label": "Spinal cord tumours",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "938-948 Gliomas",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_33",
+            "label": "Eye cancer",
+            "primaryGroup": "cancer-type"
+          },
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_13",
+            "label": "Brain tumours",
+            "primaryGroup": "cancer-type"
+          },
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_93",
+            "label": "Spinal cord tumours",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": "938-948 Gliomas",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_13",
+          "label": "C69-C72 Eye, brain and other parts of central nervous system",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "umbrella",
+        "matched_rule": null,
+        "matched_schema_term": "C69-C72 Eye, brain and other parts of central nervous system",
+        "topography_label": "C69-C72 Eye, brain and other parts of central nervous system"
+      }
+    ],
+    "topography_labels": [
+      "C69-C72 Eye, brain and other parts of central nervous system"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T21:18:20.191Z",
+  "summary": {
+    "datasetAliases": null,
+    "doiName": null,
+    "keywords": [
+      "",
+      ""
+    ],
+    "populationSize": 0
+  }
+}

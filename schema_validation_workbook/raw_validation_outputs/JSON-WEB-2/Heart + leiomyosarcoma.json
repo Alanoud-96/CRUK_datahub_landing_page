@@ -1,0 +1,96 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_2",
+      "label": "C30-C39 Respiratory system and intrathoracic organs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C30-C39 Respiratory system and intrathoracic organs",
+      "description": "",
+      "id": "0_0_0_2_6",
+      "label": "C38 Heart, mediastinum, and pleura",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_20",
+      "label": "889-892 Myomatous neoplasms",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "889-892 Myomatous neoplasms",
+      "description": "",
+      "id": "0_0_1_20_2",
+      "label": "8890/3 Leiomyosarcoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_92",
+      "isGenerated": true,
+      "label": "Soft tissue sarcoma",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_28",
+      "isGenerated": true,
+      "label": "SARC (Sarcoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8890/3 Leiomyosarcoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_92",
+            "label": "Soft tissue sarcoma",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_28",
+            "label": "SARC (Sarcoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8890/3 Leiomyosarcoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_2_6",
+          "label": "C38 Heart, mediastinum, and pleura",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "complex",
+        "matched_rule": "leiomyosarcoma",
+        "matched_schema_term": "SARC",
+        "topography_label": "C38 Heart, mediastinum, and pleura"
+      }
+    ],
+    "topography_labels": [
+      "C38 Heart, mediastinum, and pleura"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-10T17:24:57.403Z"
+}

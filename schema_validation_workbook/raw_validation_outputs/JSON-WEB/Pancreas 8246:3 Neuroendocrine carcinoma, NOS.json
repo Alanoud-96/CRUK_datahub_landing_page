@@ -1,0 +1,80 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_1",
+      "label": "C15-C26 Digestive organs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C15-C26 Digestive organs",
+      "description": "",
+      "id": "0_0_0_1_10",
+      "label": "C25 Pancreas",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_5",
+      "label": "814-838 Adenomas and adenocarcinomas",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "814-838 Adenomas and adenocarcinomas",
+      "description": "",
+      "id": "0_0_1_5_72",
+      "label": "8246/3 Neuroendocrine carcinoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_75",
+      "isGenerated": true,
+      "label": "Pancreatic cancer",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8246/3 Neuroendocrine carcinoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_75",
+            "label": "Pancreatic cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": "8246/3 Neuroendocrine carcinoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_1_10",
+          "label": "C25 Pancreas",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "intermediate",
+        "matched_rule": null,
+        "matched_schema_term": "C25 Pancreas",
+        "topography_label": "C25 Pancreas"
+      }
+    ],
+    "topography_labels": [
+      "C25 Pancreas"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T23:49:25.122Z"
+}

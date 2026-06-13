@@ -1,0 +1,96 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_13",
+      "label": "C69-C72 Eye, brain and other parts of central nervous system",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C69-C72 Eye, brain and other parts of central nervous system",
+      "description": "",
+      "id": "0_0_0_13_0",
+      "label": "C69 Eye and adnexa",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_15",
+      "label": "872-879 Nevi and melanomas",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "872-879 Nevi and melanomas",
+      "description": "",
+      "id": "0_0_1_15_2",
+      "label": "8720/3 Malignant melanoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_33",
+      "isGenerated": true,
+      "label": "Eye cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_36",
+      "isGenerated": true,
+      "label": "UVM (Uveal Melanoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8720/3 Malignant melanoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_33",
+            "label": "Eye cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_36",
+            "label": "UVM (Uveal Melanoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8720/3 Malignant melanoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_13_0",
+          "label": "C69 Eye and adnexa",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "complex",
+        "matched_rule": "uveal_melanoma",
+        "matched_schema_term": "UVM",
+        "topography_label": "C69 Eye and adnexa"
+      }
+    ],
+    "topography_labels": [
+      "C69 Eye and adnexa"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-10T16:38:55.563Z"
+}

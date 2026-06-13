@@ -1,0 +1,85 @@
+{
+  "coverage": {
+    "typicalAgeRangeMax": null
+  },
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_10",
+      "label": "C51-C58 Female genital organs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C51-C58 Female genital organs",
+      "description": "",
+      "id": "0_0_0_10_2",
+      "label": "C53 Cervix uteri",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "805-808 Squamous cell neoplasms",
+      "description": "",
+      "id": "0_0_1_2_14",
+      "label": "8070/3 Squamous cell carcinoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_110",
+      "isGenerated": true,
+      "label": "Women's cancers (gynaecological cancer)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8070/3 Squamous cell carcinoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_110",
+            "label": "Women's cancers (gynaecological cancer)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": "8070/3 Squamous cell carcinoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_10",
+          "label": "C51-C58 Female genital organs",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "special",
+        "matched_rule": "womens_cancers_gynaecological_by_topography, womens_cancers_gynaecological_by_topography_and_histology",
+        "matched_schema_term": "Women's cancers (gynaecological cancer)",
+        "topography_label": "C51-C58 Female genital organs"
+      }
+    ],
+    "topography_labels": [
+      "C51-C58 Female genital organs"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T21:27:36.470Z",
+  "summary": {
+    "datasetAliases": null,
+    "doiName": null,
+    "keywords": [
+      "",
+      ""
+    ],
+    "populationSize": 0
+  }
+}

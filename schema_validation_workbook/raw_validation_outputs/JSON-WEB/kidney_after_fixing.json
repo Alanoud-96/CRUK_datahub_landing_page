@@ -1,0 +1,126 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_12",
+      "label": "C64-C68 Urinary tract",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C64-C68 Urinary tract",
+      "description": "",
+      "id": "0_0_0_12_0",
+      "label": "C64 Kidney",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_5",
+      "label": "814-838 Adenomas and adenocarcinomas",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "814-838 Adenomas and adenocarcinomas",
+      "description": "",
+      "id": "0_0_1_5_106",
+      "label": "8310/3 Clear cell adenocarcinoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_46",
+      "isGenerated": true,
+      "label": "Kidney cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_13",
+      "isGenerated": true,
+      "label": "KIRC (Kidney renal clear cell carcinoma)",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_14",
+      "isGenerated": true,
+      "label": "KIRP (Kidney renal papillary cell carcinoma)",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_12",
+      "isGenerated": true,
+      "label": "KICH (Kidney Chromophobe)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8310/3 Clear cell adenocarcinoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_46",
+            "label": "Kidney cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_13",
+            "label": "KIRC (Kidney renal clear cell carcinoma)",
+            "primaryGroup": "cancer-type"
+          },
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_14",
+            "label": "KIRP (Kidney renal papillary cell carcinoma)",
+            "primaryGroup": "cancer-type"
+          },
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_12",
+            "label": "KICH (Kidney Chromophobe)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8310/3 Clear cell adenocarcinoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_12_0",
+          "label": "C64 Kidney",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "intermediate",
+        "matched_rule": null,
+        "matched_schema_term": "C64 Kidney",
+        "topography_label": "C64 Kidney"
+      }
+    ],
+    "topography_labels": [
+      "C64 Kidney"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T22:18:31.346Z"
+}

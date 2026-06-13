@@ -1,0 +1,111 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_11",
+      "label": "C60-C63 Male genital organs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C60-C63 Male genital organs",
+      "description": "",
+      "id": "0_0_0_11_2",
+      "label": "C62 Testis",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_25",
+      "label": "906-909 Germ cell neoplasms",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "906-909 Germ cell neoplasms",
+      "description": "",
+      "id": "0_0_1_25_13",
+      "label": "9080/3 Teratoma, malignant, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_38",
+      "isGenerated": true,
+      "label": "Germ cell tumours",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_57",
+      "isGenerated": true,
+      "label": "Men's cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_22",
+      "isGenerated": true,
+      "label": "MISC (Miscellaneous)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "9080/3 Teratoma, malignant, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_38",
+            "label": "Germ cell tumours",
+            "primaryGroup": "cancer-type"
+          },
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_57",
+            "label": "Men's cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_22",
+            "label": "MISC (Miscellaneous)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "9080/3 Teratoma, malignant, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_11_2",
+          "label": "C62 Testis",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "special",
+        "matched_rule": "germ_cell_tumours, mens_cancer_by_topography",
+        "matched_schema_term": "Germ cell tumours, Men's cancer",
+        "topography_label": "C62 Testis"
+      }
+    ],
+    "topography_labels": [
+      "C62 Testis"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-11T15:45:48.322Z"
+}

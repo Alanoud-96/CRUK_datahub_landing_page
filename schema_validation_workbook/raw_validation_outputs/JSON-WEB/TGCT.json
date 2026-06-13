@@ -1,0 +1,96 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_11",
+      "label": "C60-C63 Male genital organs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C60-C63 Male genital organs",
+      "description": "",
+      "id": "0_0_0_11_2",
+      "label": "C62 Testis",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_25",
+      "label": "906-909 Germ cell neoplasms",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "906-909 Germ cell neoplasms",
+      "description": "",
+      "id": "0_0_1_25_1",
+      "label": "9061/3 Seminoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_97",
+      "isGenerated": true,
+      "label": "Testicular cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_31",
+      "isGenerated": true,
+      "label": "TGCT (Testicular Germ Cell Tumors)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "9061/3 Seminoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_97",
+            "label": "Testicular cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_31",
+            "label": "TGCT (Testicular Germ Cell Tumors)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "9061/3 Seminoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_11_2",
+          "label": "C62 Testis",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "simple",
+        "matched_rule": null,
+        "matched_schema_term": "C62 Testis",
+        "topography_label": "C62 Testis"
+      }
+    ],
+    "topography_labels": [
+      "C62 Testis"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T23:51:59.570Z"
+}

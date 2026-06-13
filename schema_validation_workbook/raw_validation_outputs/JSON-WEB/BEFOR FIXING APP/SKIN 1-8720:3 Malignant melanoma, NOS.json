@@ -1,0 +1,85 @@
+{
+  "coverage": {
+    "typicalAgeRangeMax": null
+  },
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_5",
+      "label": "C44 Skin",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_15",
+      "label": "872-879 Nevi and melanomas",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "872-879 Nevi and melanomas",
+      "description": "",
+      "id": "0_0_1_15_2",
+      "label": "8720/3 Malignant melanoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_89",
+      "isGenerated": true,
+      "label": "Skin cancer (including basal cell and squamous cell skin cancers)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "872-879 Nevi and melanomas",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_89",
+            "label": "Skin cancer (including basal cell and squamous cell skin cancers)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": "872-879 Nevi and melanomas",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_5",
+          "label": "C44 Skin",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "complex",
+        "matched_rule": "fallback",
+        "matched_schema_term": "SKCM",
+        "topography_label": "C44 Skin"
+      }
+    ],
+    "topography_labels": [
+      "C44 Skin"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T21:07:53.004Z",
+  "summary": {
+    "datasetAliases": null,
+    "doiName": null,
+    "keywords": [
+      "",
+      ""
+    ],
+    "populationSize": 0
+  }
+}

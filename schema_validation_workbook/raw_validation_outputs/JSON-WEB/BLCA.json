@@ -1,0 +1,96 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_12",
+      "label": "C64-C68 Urinary tract",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C64-C68 Urinary tract",
+      "description": "",
+      "id": "0_0_0_12_3",
+      "label": "C67 Bladder",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_4",
+      "label": "812-813 Transitional cell papillomas and carcinomas",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "812-813 Transitional cell papillomas and carcinomas",
+      "description": "",
+      "id": "0_0_1_4_2",
+      "label": "8120/3 Transitional cell carcinoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_9",
+      "isGenerated": true,
+      "label": "Bladder cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_1",
+      "isGenerated": true,
+      "label": "BLCA (Bladder Urothelial Carcinoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8120/3 Transitional cell carcinoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_9",
+            "label": "Bladder cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_1",
+            "label": "BLCA (Bladder Urothelial Carcinoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8120/3 Transitional cell carcinoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_12_3",
+          "label": "C67 Bladder",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "simple",
+        "matched_rule": null,
+        "matched_schema_term": "C67 Bladder",
+        "topography_label": "C67 Bladder"
+      }
+    ],
+    "topography_labels": [
+      "C67 Bladder"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T23:48:41.107Z"
+}

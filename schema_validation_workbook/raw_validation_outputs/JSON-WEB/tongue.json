@@ -1,0 +1,80 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_0",
+      "label": "C00-C14 Lip, oral cavity and pharynx",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C00-C14 Lip, oral cavity and pharynx",
+      "description": "",
+      "id": "0_0_0_0_2",
+      "label": "C02 Other and unspecified parts of tongue",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_2",
+      "label": "805-808 Squamous cell neoplasms",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "805-808 Squamous cell neoplasms",
+      "description": "",
+      "id": "0_0_1_2_14",
+      "label": "8070/3 Squamous cell carcinoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_100",
+      "isGenerated": true,
+      "label": "Tongue cancer",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8070/3 Squamous cell carcinoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_100",
+            "label": "Tongue cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": "8070/3 Squamous cell carcinoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_0_2",
+          "label": "C02 Other and unspecified parts of tongue",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "simple",
+        "matched_rule": null,
+        "matched_schema_term": "C02 Tongue",
+        "topography_label": "C02 Other and unspecified parts of tongue"
+      }
+    ],
+    "topography_labels": [
+      "C02 Other and unspecified parts of tongue"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T23:52:55.986Z"
+}

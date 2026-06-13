@@ -1,0 +1,96 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_10",
+      "label": "C51-C58 Female genital organs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C51-C58 Female genital organs",
+      "description": "",
+      "id": "0_0_0_10_3",
+      "label": "C54 Corpus uteri",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_5",
+      "label": "814-838 Adenomas and adenocarcinomas",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "814-838 Adenomas and adenocarcinomas",
+      "description": "",
+      "id": "0_0_1_5_161",
+      "label": "8380/3 Endometrioid adenocarcinoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_31",
+      "isGenerated": true,
+      "label": "Endometrial cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_34",
+      "isGenerated": true,
+      "label": "UCEC (Uterine Corpus Endometrial Carcinoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8380/3 Endometrioid adenocarcinoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_31",
+            "label": "Endometrial cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_34",
+            "label": "UCEC (Uterine Corpus Endometrial Carcinoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8380/3 Endometrioid adenocarcinoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_10_3",
+          "label": "C54 Corpus uteri",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "simple",
+        "matched_rule": null,
+        "matched_schema_term": "C54 Corpus uteri",
+        "topography_label": "C54 Corpus uteri"
+      }
+    ],
+    "topography_labels": [
+      "C54 Corpus uteri"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T23:40:18.645Z"
+}

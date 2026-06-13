@@ -1,0 +1,96 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_0",
+      "label": "C00-C14 Lip, oral cavity and pharynx",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C00-C14 Lip, oral cavity and pharynx",
+      "description": "",
+      "id": "0_0_0_0_10",
+      "label": "C10 Oropharynx",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_2",
+      "label": "805-808 Squamous cell neoplasms",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "805-808 Squamous cell neoplasms",
+      "description": "",
+      "id": "0_0_1_2_14",
+      "label": "8070/3 Squamous cell carcinoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_41",
+      "isGenerated": true,
+      "label": "Head and neck cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_11",
+      "isGenerated": true,
+      "label": "HNSC (Head and Neck squamous cell carcinoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8070/3 Squamous cell carcinoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_41",
+            "label": "Head and neck cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_11",
+            "label": "HNSC (Head and Neck squamous cell carcinoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8070/3 Squamous cell carcinoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_0_10",
+          "label": "C10 Oropharynx",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "complex",
+        "matched_rule": "head_neck_squamous",
+        "matched_schema_term": "HNSC",
+        "topography_label": "C10 Oropharynx"
+      }
+    ],
+    "topography_labels": [
+      "C10 Oropharynx"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T23:53:51.787Z"
+}

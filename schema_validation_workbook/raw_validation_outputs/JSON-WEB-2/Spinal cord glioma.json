@@ -1,0 +1,80 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_13",
+      "label": "C69-C72 Eye, brain and other parts of central nervous system",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C69-C72 Eye, brain and other parts of central nervous system",
+      "description": "",
+      "id": "0_0_0_13_3",
+      "label": "C72 Spinal cord, cranial nerves, and other parts of central nervous system",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_35",
+      "label": "938-948 Gliomas",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "938-948 Gliomas",
+      "description": "",
+      "id": "0_0_1_35_0",
+      "label": "9380/3 Glioma, malignant",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_93",
+      "isGenerated": true,
+      "label": "Spinal cord tumours",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "9380/3 Glioma, malignant",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_93",
+            "label": "Spinal cord tumours",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": "9380/3 Glioma, malignant",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_13_3",
+          "label": "C72 Spinal cord, cranial nerves, and other parts of central nervous system",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "complex",
+        "matched_rule": "spinal_cord_exact",
+        "matched_schema_term": "SPINAL_CORD",
+        "topography_label": "C72 Spinal cord, cranial nerves, and other parts of central nervous system"
+      }
+    ],
+    "topography_labels": [
+      "C72 Spinal cord, cranial nerves, and other parts of central nervous system"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-10T17:40:58.349Z"
+}

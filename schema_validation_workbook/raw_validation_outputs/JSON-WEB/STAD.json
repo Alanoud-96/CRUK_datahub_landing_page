@@ -1,0 +1,96 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_1",
+      "label": "C15-C26 Digestive organs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C15-C26 Digestive organs",
+      "description": "",
+      "id": "0_0_0_1_1",
+      "label": "C16 Stomach",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_8",
+      "label": "844-849 Cystic, mucinous and serous neoplasms",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "844-849 Cystic, mucinous and serous neoplasms",
+      "description": "",
+      "id": "0_0_1_8_30",
+      "label": "8490/3 Signet ring cell carcinoma",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_36",
+      "isGenerated": true,
+      "label": "Gastric cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_30",
+      "isGenerated": true,
+      "label": "STAD (Stomach adenocarcinoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8490/3 Signet ring cell carcinoma",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_36",
+            "label": "Gastric cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_30",
+            "label": "STAD (Stomach adenocarcinoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8490/3 Signet ring cell carcinoma",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_1_1",
+          "label": "C16 Stomach",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "simple",
+        "matched_rule": null,
+        "matched_schema_term": "C16 Stomach",
+        "topography_label": "C16 Stomach"
+      }
+    ],
+    "topography_labels": [
+      "C16 Stomach"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T23:46:57.857Z"
+}

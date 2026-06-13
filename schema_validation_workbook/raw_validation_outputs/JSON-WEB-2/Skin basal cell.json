@@ -1,0 +1,73 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_5",
+      "label": "C44 Skin",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_3",
+      "label": "809-811 Basal cell neoplasms",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "809-811 Basal cell neoplasms",
+      "description": "",
+      "id": "0_0_1_3_0",
+      "label": "8090/3 Basal cell carcinoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_7",
+      "isGenerated": true,
+      "label": "Basal cell skin cancer",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8090/3 Basal cell carcinoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_7",
+            "label": "Basal cell skin cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": "8090/3 Basal cell carcinoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_5",
+          "label": "C44 Skin",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "complex",
+        "matched_rule": "basal_cell_skin",
+        "matched_schema_term": "NON_MELANOMA_SKIN",
+        "topography_label": "C44 Skin"
+      }
+    ],
+    "topography_labels": [
+      "C44 Skin"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-10T17:16:59.813Z"
+}

@@ -1,0 +1,96 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_11",
+      "label": "C60-C63 Male genital organs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C60-C63 Male genital organs",
+      "description": "",
+      "id": "0_0_0_11_1",
+      "label": "C61 Prostate gland",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_5",
+      "label": "814-838 Adenomas and adenocarcinomas",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "814-838 Adenomas and adenocarcinomas",
+      "description": "",
+      "id": "0_0_1_5_3",
+      "label": "8140/3 Adenocarcinoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_81",
+      "isGenerated": true,
+      "label": "Prostate cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_26",
+      "isGenerated": true,
+      "label": "PRAD (Prostate adenocarcinoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8140/3 Adenocarcinoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_81",
+            "label": "Prostate cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_26",
+            "label": "PRAD (Prostate adenocarcinoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8140/3 Adenocarcinoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_11_1",
+          "label": "C61 Prostate gland",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "simple",
+        "matched_rule": null,
+        "matched_schema_term": "C61 Prostate gland",
+        "topography_label": "C61 Prostate gland"
+      }
+    ],
+    "topography_labels": [
+      "C61 Prostate gland"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T23:38:06.411Z"
+}

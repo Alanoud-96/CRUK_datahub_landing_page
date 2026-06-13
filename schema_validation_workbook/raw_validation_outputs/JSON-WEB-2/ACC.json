@@ -1,0 +1,96 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_14",
+      "label": "C73-C75 Thyroid and other endocrine glands",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C73-C75 Thyroid and other endocrine glands",
+      "description": "",
+      "id": "0_0_0_14_1",
+      "label": "C74 Adrenal gland",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_5",
+      "label": "814-838 Adenomas and adenocarcinomas",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "814-838 Adenomas and adenocarcinomas",
+      "description": "",
+      "id": "0_0_1_5_152",
+      "label": "8370/3 Adrenal cortical carcinoma",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_4",
+      "isGenerated": true,
+      "label": "Adrenal gland tumours",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_0",
+      "isGenerated": true,
+      "label": "ACC (Adrenocortical carcinoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8370/3 Adrenal cortical carcinoma",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_4",
+            "label": "Adrenal gland tumours",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_0",
+            "label": "ACC (Adrenocortical carcinoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8370/3 Adrenal cortical carcinoma",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_14_1",
+          "label": "C74 Adrenal gland",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "intermediate",
+        "matched_rule": null,
+        "matched_schema_term": "C74 Adrenal gland",
+        "topography_label": "C74 Adrenal gland"
+      }
+    ],
+    "topography_labels": [
+      "C74 Adrenal gland"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-11T14:52:41.146Z"
+}

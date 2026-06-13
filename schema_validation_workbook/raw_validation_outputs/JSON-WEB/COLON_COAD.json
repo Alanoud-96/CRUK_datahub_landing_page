@@ -1,0 +1,111 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_1",
+      "label": "C15-C26 Digestive organs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C15-C26 Digestive organs",
+      "description": "",
+      "id": "0_0_0_1_3",
+      "label": "C18 Colon",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_5",
+      "label": "814-838 Adenomas and adenocarcinomas",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "814-838 Adenomas and adenocarcinomas",
+      "description": "",
+      "id": "0_0_1_5_3",
+      "label": "8140/3 Adenocarcinoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_12",
+      "isGenerated": true,
+      "label": "Bowel cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_29",
+      "isGenerated": true,
+      "label": "Colorectal cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_6",
+      "isGenerated": true,
+      "label": "COAD (Colon adenocarcinoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8140/3 Adenocarcinoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_12",
+            "label": "Bowel cancer",
+            "primaryGroup": "cancer-type"
+          },
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_29",
+            "label": "Colorectal cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_6",
+            "label": "COAD (Colon adenocarcinoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8140/3 Adenocarcinoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_1_3",
+          "label": "C18 Colon",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "simple",
+        "matched_rule": null,
+        "matched_schema_term": "C18 Colon",
+        "topography_label": "C18 Colon"
+      }
+    ],
+    "topography_labels": [
+      "C18 Colon"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T23:00:03.559Z"
+}

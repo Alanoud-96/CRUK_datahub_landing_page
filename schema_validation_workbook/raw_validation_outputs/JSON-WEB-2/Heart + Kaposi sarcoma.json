@@ -1,0 +1,80 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_2",
+      "label": "C30-C39 Respiratory system and intrathoracic organs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C30-C39 Respiratory system and intrathoracic organs",
+      "description": "",
+      "id": "0_0_0_2_6",
+      "label": "C38 Heart, mediastinum, and pleura",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_28",
+      "label": "912-916 Blood vessel tumors",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "912-916 Blood vessel tumors",
+      "description": "",
+      "id": "0_0_1_28_18",
+      "label": "9140/3 Kaposi sarcoma",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_55",
+      "isGenerated": true,
+      "label": "Mediastinal germ cell tumours",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "9140/3 Kaposi sarcoma",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_55",
+            "label": "Mediastinal germ cell tumours",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": "9140/3 Kaposi sarcoma",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_2_6",
+          "label": "C38 Heart, mediastinum, and pleura",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "complex",
+        "matched_rule": "fallback",
+        "matched_schema_term": "MEDIASTINAL_GERM_CELL",
+        "topography_label": "C38 Heart, mediastinum, and pleura"
+      }
+    ],
+    "topography_labels": [
+      "C38 Heart, mediastinum, and pleura"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-10T17:23:29.534Z"
+}

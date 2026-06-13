@@ -1,0 +1,96 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_13",
+      "label": "C69-C72 Eye, brain and other parts of central nervous system",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C69-C72 Eye, brain and other parts of central nervous system",
+      "description": "",
+      "id": "0_0_0_13_2",
+      "label": "C71 Brain",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_35",
+      "label": "938-948 Gliomas",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "938-948 Gliomas",
+      "description": "",
+      "id": "0_0_1_35_34",
+      "label": "9450/3 Oligodendroglioma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_13",
+      "isGenerated": true,
+      "label": "Brain tumours",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_17",
+      "isGenerated": true,
+      "label": "LGG (Brain Lower Grade Glioma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "9450/3 Oligodendroglioma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_13",
+            "label": "Brain tumours",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_17",
+            "label": "LGG (Brain Lower Grade Glioma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "9450/3 Oligodendroglioma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_13_2",
+          "label": "C71 Brain",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "intermediate",
+        "matched_rule": null,
+        "matched_schema_term": "C71 Brain",
+        "topography_label": "C71 Brain"
+      }
+    ],
+    "topography_labels": [
+      "C71 Brain"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T23:31:12.133Z"
+}

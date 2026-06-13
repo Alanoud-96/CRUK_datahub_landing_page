@@ -1,0 +1,73 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_5",
+      "label": "C44 Skin",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_28",
+      "label": "912-916 Blood vessel tumors",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "912-916 Blood vessel tumors",
+      "description": "",
+      "id": "0_0_1_28_18",
+      "label": "9140/3 Kaposi sarcoma",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_89",
+      "isGenerated": true,
+      "label": "Skin cancer (including basal cell and squamous cell skin cancers)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "9140/3 Kaposi sarcoma",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_89",
+            "label": "Skin cancer (including basal cell and squamous cell skin cancers)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": "9140/3 Kaposi sarcoma",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_5",
+          "label": "C44 Skin",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "complex",
+        "matched_rule": "fallback",
+        "matched_schema_term": "SKCM",
+        "topography_label": "C44 Skin"
+      }
+    ],
+    "topography_labels": [
+      "C44 Skin"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-11T15:40:21.236Z"
+}

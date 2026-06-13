@@ -1,0 +1,96 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_2",
+      "label": "C30-C39 Respiratory system and intrathoracic organs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C30-C39 Respiratory system and intrathoracic organs",
+      "description": "",
+      "id": "0_0_0_2_4",
+      "label": "C34 Bronchus and lung",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_2",
+      "label": "805-808 Squamous cell neoplasms",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "805-808 Squamous cell neoplasms",
+      "description": "",
+      "id": "0_0_1_2_14",
+      "label": "8070/3 Squamous cell carcinoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_51",
+      "isGenerated": true,
+      "label": "Lung cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_20",
+      "isGenerated": true,
+      "label": "LUSC (Lung squamous cell carcinoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8070/3 Squamous cell carcinoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_51",
+            "label": "Lung cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_20",
+            "label": "LUSC (Lung squamous cell carcinoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8070/3 Squamous cell carcinoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_2_4",
+          "label": "C34 Bronchus and lung",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "intermediate",
+        "matched_rule": null,
+        "matched_schema_term": "C34 Bronchus and lung",
+        "topography_label": "C34 Bronchus and lung"
+      }
+    ],
+    "topography_labels": [
+      "C34 Bronchus and lung"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T22:52:38.084Z"
+}

@@ -1,0 +1,85 @@
+{
+  "coverage": {
+    "typicalAgeRangeMax": null
+  },
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_6",
+      "label": "C47 Peripheral nerves and autonomic nervous system",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_38",
+      "label": "954-957 Nerve sheath tumors",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "954-957 Nerve sheath tumors",
+      "description": "",
+      "id": "0_0_1_38_1",
+      "label": "9540/3 Malignant peripheral nerve sheath tumor, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_83",
+      "isGenerated": true,
+      "label": "Rare cancer",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "954-957 Nerve sheath tumors",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_83",
+            "label": "Rare cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": "954-957 Nerve sheath tumors",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_6",
+          "label": "C47 Peripheral nerves and autonomic nervous system",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "rare",
+        "matched_rule": "rare_cancer_fallback",
+        "matched_schema_term": "Rare cancer",
+        "topography_label": "C47 Peripheral nerves and autonomic nervous system"
+      }
+    ],
+    "topography_labels": [
+      "C47 Peripheral nerves and autonomic nervous system"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T21:30:52.175Z",
+  "summary": {
+    "datasetAliases": null,
+    "doiName": null,
+    "keywords": [
+      "",
+      ""
+    ],
+    "populationSize": 0
+  }
+}

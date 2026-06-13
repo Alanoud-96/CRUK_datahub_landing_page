@@ -1,0 +1,89 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_8",
+      "label": "C49 Connective, subcutaneous and other soft tissues",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_16",
+      "label": "880 Soft tissue tumors and sarcomas, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "880 Soft tissue tumors and sarcomas, NOS",
+      "description": "",
+      "id": "0_0_1_16_1",
+      "label": "8800/3 Sarcoma, NOS",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_92",
+      "isGenerated": true,
+      "label": "Soft tissue sarcoma",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "cancerTypes",
+      "description": "",
+      "id": "0_0_4_28",
+      "isGenerated": true,
+      "label": "SARC (Sarcoma)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": "8800/3 Sarcoma, NOS",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_92",
+            "label": "Soft tissue sarcoma",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [
+          {
+            "category": "cancerTypes",
+            "description": "",
+            "id": "0_0_4_28",
+            "label": "SARC (Sarcoma)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "histology_label": "8800/3 Sarcoma, NOS",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_8",
+          "label": "C49 Connective, subcutaneous and other soft tissues",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "complex",
+        "matched_rule": "sarcoma_generic",
+        "matched_schema_term": "SARC",
+        "topography_label": "C49 Connective, subcutaneous and other soft tissues"
+      }
+    ],
+    "topography_labels": [
+      "C49 Connective, subcutaneous and other soft tissues"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-09T23:42:20.977Z"
+}
