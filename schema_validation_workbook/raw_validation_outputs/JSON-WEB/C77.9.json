@@ -1,0 +1,59 @@
+{
+  "datasetFilters": [
+    {
+      "category": "C77 Lymph nodes",
+      "description": "",
+      "id": "0_0_0_16_7",
+      "label": "C77.9 Lymph node, nos",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_87",
+      "isGenerated": true,
+      "label": "Secondary cancer",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": null,
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_87",
+            "label": "Secondary cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": null,
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_16_7",
+          "label": "C77.9 Lymph node, nos",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "simple",
+        "matched_rule": null,
+        "matched_schema_term": "C77.9 Lymph node, nos",
+        "topography_label": "C77.9 Lymph node, nos"
+      }
+    ],
+    "topography_labels": [
+      "C77.9 Lymph node, nos"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-20T01:49:42.513Z"
+}

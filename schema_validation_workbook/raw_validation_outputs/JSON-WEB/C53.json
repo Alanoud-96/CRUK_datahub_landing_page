@@ -1,0 +1,59 @@
+{
+  "datasetFilters": [
+    {
+      "category": "C51-C58 Female genital organs",
+      "description": "",
+      "id": "0_0_0_10_2",
+      "label": "C53 Cervix uteri",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_110",
+      "isGenerated": true,
+      "label": "Women's cancers (gynaecological cancer)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": null,
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_110",
+            "label": "Women's cancers (gynaecological cancer)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": null,
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_10_2",
+          "label": "C53 Cervix uteri",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "special",
+        "matched_rule": "womens_cancers_gynaecological_by_topography",
+        "matched_schema_term": "Women's cancers (gynaecological cancer)",
+        "topography_label": "C53 Cervix uteri"
+      }
+    ],
+    "topography_labels": [
+      "C53 Cervix uteri"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-20T01:45:24.768Z"
+}

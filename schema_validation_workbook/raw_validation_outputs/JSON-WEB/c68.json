@@ -1,0 +1,61 @@
+{
+  "datasetFilters": [
+    {
+      "category": "C64-C68 Urinary tract",
+      "description": "",
+      "id": "0_0_0_12_4",
+      "label": "C68 Other and unspecified urinary organs",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_83",
+      "isGenerated": true,
+      "label": "Rare cancer",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [
+      "No histology string was provided for term(s) that were not resolved at simple level. Histology-dependent mapping levels may fail or be incomplete."
+    ],
+    "existing_cruk_labels": [],
+    "histology_label": null,
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_83",
+            "label": "Rare cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": null,
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_12_4",
+          "label": "C68 Other and unspecified urinary organs",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "rare",
+        "matched_rule": "rare_cancer_fallback",
+        "matched_schema_term": "Rare cancer",
+        "topography_label": "C68 Other and unspecified urinary organs"
+      }
+    ],
+    "topography_labels": [
+      "C68 Other and unspecified urinary organs"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-20T02:02:00.454Z"
+}

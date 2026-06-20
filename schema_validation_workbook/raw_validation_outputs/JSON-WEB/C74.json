@@ -1,0 +1,59 @@
+{
+  "datasetFilters": [
+    {
+      "category": "C73-C75 Thyroid and other endocrine glands",
+      "description": "",
+      "id": "0_0_0_14_1",
+      "label": "C74 Adrenal gland",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_4",
+      "isGenerated": true,
+      "label": "Adrenal gland tumours",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": null,
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_4",
+            "label": "Adrenal gland tumours",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": null,
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_14_1",
+          "label": "C74 Adrenal gland",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "intermediate",
+        "matched_rule": null,
+        "matched_schema_term": "C74 Adrenal gland",
+        "topography_label": "C74 Adrenal gland"
+      }
+    ],
+    "topography_labels": [
+      "C74 Adrenal gland"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-20T01:47:34.432Z"
+}

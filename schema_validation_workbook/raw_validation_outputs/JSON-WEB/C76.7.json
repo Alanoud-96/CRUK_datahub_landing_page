@@ -1,0 +1,74 @@
+{
+  "datasetFilters": [
+    {
+      "category": "C76 Other and ill-defined sites",
+      "description": "",
+      "id": "0_0_0_15_6",
+      "label": "C76.7 Other ill-defined sites",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_103",
+      "isGenerated": true,
+      "label": "Unknown primary cancer",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_17",
+      "isGenerated": true,
+      "label": "Cancer of unknown primary (CUP)",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [],
+    "existing_cruk_labels": [],
+    "histology_label": null,
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_103",
+            "label": "Unknown primary cancer",
+            "primaryGroup": "cancer-type"
+          },
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_17",
+            "label": "Cancer of unknown primary (CUP)",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": null,
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_15_6",
+          "label": "C76.7 Other ill-defined sites",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "simple",
+        "matched_rule": null,
+        "matched_schema_term": "C76.7 Other ill-defined sites",
+        "topography_label": "C76.7 Other ill-defined sites"
+      }
+    ],
+    "topography_labels": [
+      "C76.7 Other ill-defined sites"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-20T01:48:34.532Z"
+}

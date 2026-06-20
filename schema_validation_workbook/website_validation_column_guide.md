@@ -11,6 +11,9 @@ The `Test ID` identifies each validation case. The prefix indicates the type of 
 * **STRESS**: Stress-testing cases. These were designed to test more difficult or unusual mapping situations and check whether the mapping logic remained stable.
 * **EDGE**: Edge-case and unusual histology tests. These focused on unusual, rare, or ambiguous histology combinations that may need closer review.
 * **LIMIT**: Known limitation testing. These cases were used to document behaviour that reflects a known limitation of the current mapping structure.
+* **TOPO** : Topography-only validation tests. These cases check whether selected ICD-O topography terms return the expected CRUK and/or TCGA labels when no histology term is provided.
+* **RARE: Rare cancer validation tests**. These cases check whether rare topography terms are handled correctly by the rare cancer mapping logic.
+
 
 ## Validation Section
 
@@ -21,6 +24,8 @@ The `Validation Section` column groups the tests according to the stage or purpo
 * **Stress testing**: Additional tests using more difficult cases to check the robustness of the mapping logic.
 * **Edge-case and unusual histology testing**: Tests focused on unusual histology terms or unusual site-histology combinations.
 * **Known limitation testing**: Tests used to document behaviour that is understood as a limitation rather than a simple error.
+
+* **Additional validation** : Extra validation cases added after the main validation set. These include topography-only checks and rare cancer checks used to clarify mapping behaviour when histology is not provided.
 
 ## Test Category
 
@@ -51,6 +56,10 @@ The `Test Category` column describes the specific purpose of each validation tes
 * **Schema rule collision review**: Reviews cases where more than one schema rule may overlap or compete.
 * **Special mapping review**: Reviews cases handled by special-case mapping logic.
 * **Gynaecological site-histology review**: Reviews mappings for gynaecological sites where site and histology combinations may affect the expected output.
+
+* **Topography-only validation** : Checks whether selected ICD-O topography terms can return the expected mapping output without requiring an ICD-O histology term. These tests help confirm which mappings are based on topography alone.
+
+* **Rare topography-only validation** : Checks whether rare cancer topography terms resolve to the expected rare cancer output when no histology term is provided. A no-histology warning may appear in these cases because the test intentionally omits histology.
 
 ## Input ICD-O Topography
 

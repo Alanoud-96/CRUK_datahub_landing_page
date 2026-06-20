@@ -1,0 +1,61 @@
+{
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_6",
+      "label": "C47 Peripheral nerves and autonomic nervous system",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_83",
+      "isGenerated": true,
+      "label": "Rare cancer",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": null,
+    "childhood_case_detected": false,
+    "encountered_problems": [
+      "No histology string was provided for term(s) that were not resolved at simple level. Histology-dependent mapping levels may fail or be incomplete."
+    ],
+    "existing_cruk_labels": [],
+    "histology_label": null,
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_83",
+            "label": "Rare cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": null,
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_6",
+          "label": "C47 Peripheral nerves and autonomic nervous system",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "rare",
+        "matched_rule": "rare_cancer_fallback",
+        "matched_schema_term": "Rare cancer",
+        "topography_label": "C47 Peripheral nerves and autonomic nervous system"
+      }
+    ],
+    "topography_labels": [
+      "C47 Peripheral nerves and autonomic nervous system"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-20T02:01:25.302Z"
+}

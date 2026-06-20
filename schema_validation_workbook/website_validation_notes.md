@@ -1498,5 +1498,55 @@ Observed behaviour:
 Conclusion:
 This test was recorded as Under Review. The CRUK outputs were site-appropriate and the mapping did not incorrectly generate an ovarian TCGA output. However, the absence of TCGA UCEC should be reviewed because this may represent a TCGA gap for this histology-specific uterine case.
 -------
+TOPO-001 to TOPO-006: Topography-only validation review
+
+Input tested:
+* TOPO-001: C50 Breast
+* TOPO-002: C34 Bronchus and lung
+* TOPO-003: C53 Cervix uteri
+* TOPO-004: C74 Adrenal gland
+* TOPO-005: C76.7 Other ill-defined sites
+* TOPO-006: C77.9 Lymph node, NOS
+* Histology: Not provided
+
+Expected behaviour:
+* These tests were used to check whether selected ICD-O topography terms could return the expected CRUK and/or TCGA outputs without an ICD-O histology term.
+* For direct topography-based mappings, the output should still be generated even when histology is absent.
+* These tests also help clarify why some validation rows can include histology in the main table while still being expected to resolve through a non-histology-dependent mapping tier.
+
+Observed behaviour:
+* C50 Breast returned Breast cancer and BRCA.
+* C34 Bronchus and lung returned Lung cancer with LUAD and LUSC as default TCGA outputs.
+* C53 Cervix uteri returned Women's cancers (gynaecological cancer).
+* C74 Adrenal gland returned Adrenal gland tumours.
+* C76.7 Other ill-defined sites returned Unknown primary cancer and Cancer of unknown primary (CUP).
+* C77.9 Lymph node, NOS returned Secondary cancer.
+
+Conclusion:
+These tests were recorded as additional topography-only validation cases. Most cases behaved as expected and confirmed that several mappings can be resolved from topography alone. C53 Cervix uteri was kept for review because the output returned the broader Women's cancers (gynaecological cancer) label, rather than a more specific Cervical cancer output.
+----------------
+
+RARE-001 to RARE-002: Rare topography-only validation review
+
+Input tested:
+* RARE-001: C47 Peripheral nerves and autonomic nervous system
+* RARE-002: C68 Other and unspecified urinary organs
+* Histology: Not provided
+
+Expected behaviour:
+* These tests were used to check whether rare topography terms could be handled by the rare cancer mapping logic when no histology term was provided.
+* The expected CRUK output was Rare cancer.
+* The expected matched schema was rare.
+
+Observed behaviour:
+* C47 Peripheral nerves and autonomic nervous system returned Rare cancer.
+* C68 Other and unspecified urinary organs returned Rare cancer.
+* The rare schema was matched in both cases.
+* The rare cancer fallback rule was used.
+* A no-histology warning was shown because no histology term was provided.
+
+Conclusion:
+These tests were recorded as Pass. The outputs confirmed that the selected rare topography terms resolved to Rare cancer through the rare cancer fallback logic. The no-histology warning was expected in these cases because the tests intentionally used topography only.
+---------
 
 
