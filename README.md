@@ -18,6 +18,36 @@ and a node_modules directory which you do and should be placed in the vite direc
 10) To check everything is running nicely before committing to github you can then head over to docs and use 
 `npx http-server`
 
+### Filters
+
+The Data Hub uses filter objects to categorise and display metadata on the site - for example, a cancer type, a CRUK term, or an ICD-O code. Filters allow users to search and browse data by these categories.
+
+Filter categories :
+* icdOTopography - ICD-O topography terms describing the anatomical site of a cancer, e.g. C64 Kidney.
+* icdOHistology / icdOMorphology — ICD-O terms describing the tumour or cell type, e.g. 8312/3 Renal cell carcinoma.
+* crukTerms - CRUK cancer terms produced by the ICD-O mapping workflow, e.g. Kidney cancer.
+* cancerTypes - cancer type filter objects from the filter data. This category may also include TCGA project labels, e.g. KIRC Kidney renal clear cell carcinoma.
+
+TCGA project filters :
+TCGA (The Cancer Genome Atlas) is a cancer genomics project, and some cancer types in the Data Hub correspond to a recognised TCGA project. Where a mapped ICD-O topography and histology combination matches one of these projects, the mapping workflow can also return a TCGA project filter alongside the CRUK term - for example, a kidney cancer mapping may return Kidney cancer as the CRUK term together with KIRC, KIRP, or KICH as TCGA project filters, depending on the specific topography/histology combination. This is useful where users want to cross-reference Data Hub results against TCGA cohorts.
+Not all mappings have a matching TCGA project. In these cases, only the CRUK term is returned.
+
+Filter object structure :
+Each filter object, including those returned by the mapping workflow, uses the standard fields expected by the Data Hub:
+* id
+* label
+* category
+* primaryGroup
+* description
+
+Generated mapping outputs :
+Filter objects returned by the ICD-O mapping workflow may include:
+{
+  "isGenerated": true
+}
+This indicates that the filter object was added automatically by the mapping workflow as a mapped output, rather than being manually selected by the user on the website. This can apply to CRUK terms, such as Kidney cancer, and TCGA project filters, such as KIRC, depending on the mapping result.
+
+
 ### The Structure of the pages
 The pages are built from index.html which create a root for ./src/main.jsx to spin out links from.
 
