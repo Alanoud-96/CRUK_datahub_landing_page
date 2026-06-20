@@ -1549,4 +1549,30 @@ Conclusion:
 These tests were recorded as Pass. The outputs confirmed that the selected rare topography terms resolved to Rare cancer through the rare cancer fallback logic. The no-histology warning was expected in these cases because the tests intentionally used topography only.
 ---------
 
+### CHILD-001 to CHILD-003: Childhood age-range validation review
+
+Input tested:
+* CHILD-001: C77.9 Lymph node, NOS with histology 9724/3 Systemic EBV positive T-cell lymphoproliferative disease of childhood and age range 0–15 years
+* CHILD-002: C77.9 Lymph node, NOS with histology 9724/3 Systemic EBV positive T-cell lymphoproliferative disease of childhood and age range 0–18 years
+* CHILD-003: C77.9 Lymph node, NOS with histology 9724/3 Systemic EBV positive T-cell lymphoproliferative disease of childhood and age range 0–19 years
+
+Expected behaviour:
+* These tests were used to check the childhood age-range detection logic in the website mapping output.
+* CHILD-001 and CHILD-002 were expected to trigger childhood detection because the maximum age range was 18 or below.
+* CHILD-003 was expected not to trigger childhood detection because the maximum age range was 19.
+* The expected CRUK output in all cases was Secondary cancer.
+* No TCGA output was expected.
+
+Observed behaviour:
+* CHILD-001 and CHILD-002 returned `childhood_case_detected: true`.
+* CHILD-002 recorded `Children's cancers` in `existing_cruk_labels`.
+* CHILD-003 returned `childhood_case_detected: false`.
+* CHILD-003 did not record any childhood label in `existing_cruk_labels`.
+* All three tests returned Secondary cancer as the generated CRUK filter.
+* No TCGA project output was returned.
+* The matched schema level was simple.
+
+Conclusion:
+These tests were recorded as Pass. The outputs confirmed that the childhood age-range logic is triggered when the maximum age range is 18 or below, but not when the maximum age range is 19. `Children's cancers` was captured as mapping metadata through `existing_cruk_labels` in the positive cases, while the returned generated CRUK filter remained Secondary cancer. No action is required.
+------
 

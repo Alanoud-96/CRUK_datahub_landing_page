@@ -13,6 +13,7 @@ The `Test ID` identifies each validation case. The prefix indicates the type of 
 * **LIMIT**: Known limitation testing. These cases were used to document behaviour that reflects a known limitation of the current mapping structure.
 * **TOPO** : Topography-only validation tests. These cases check whether selected ICD-O topography terms return the expected CRUK and/or TCGA labels when no histology term is provided.
 * **RARE: Rare cancer validation tests**. These cases check whether rare topography terms are handled correctly by the rare cancer mapping logic.
+* **CHILD**: Childhood age-range validation tests. These cases check whether `childhood_case_detected` is triggered correctly when the dataset maximum age range is 18 or below.
 
 
 ## Validation Section
@@ -24,8 +25,7 @@ The `Validation Section` column groups the tests according to the stage or purpo
 * **Stress testing**: Additional tests using more difficult cases to check the robustness of the mapping logic.
 * **Edge-case and unusual histology testing**: Tests focused on unusual histology terms or unusual site-histology combinations.
 * **Known limitation testing**: Tests used to document behaviour that is understood as a limitation rather than a simple error.
-
-* **Additional validation** : Extra validation cases added after the main validation set. These include topography-only checks and rare cancer checks used to clarify mapping behaviour when histology is not provided.
+* **Additional validation** :  Extra validation cases added after the main validation set. These include topography-only checks, rare topography-only checks used to clarify mapping behaviour when histology is not provided, and metadata-related checks such as childhood age-range detection, where a maximum age range of 18 or below is used to confirm that `childhood_case_detected` is triggered correctly. 
 
 ## Test Category
 
@@ -56,10 +56,9 @@ The `Test Category` column describes the specific purpose of each validation tes
 * **Schema rule collision review**: Reviews cases where more than one schema rule may overlap or compete.
 * **Special mapping review**: Reviews cases handled by special-case mapping logic.
 * **Gynaecological site-histology review**: Reviews mappings for gynaecological sites where site and histology combinations may affect the expected output.
-
 * **Topography-only validation** : Checks whether selected ICD-O topography terms can return the expected mapping output without requiring an ICD-O histology term. These tests help confirm which mappings are based on topography alone.
-
 * **Rare topography-only validation** : Checks whether rare cancer topography terms resolve to the expected rare cancer output when no histology term is provided. A no-histology warning may appear in these cases because the test intentionally omits histology.
+* **Childhood age-range validation** : Checks whether childhood metadata is triggered correctly when the dataset maximum age range is 18 or below. These tests confirm that childhood_case_detected is returned as true for childhood cases and false when the maximum age range is above the childhood threshold.
 
 ## Input ICD-O Topography
 
@@ -100,3 +99,4 @@ The `Resolution` column records the current status of the issue or test case, su
 ## Histology Coverage Note
 
 The validation table includes 101 test cases with histology inputs, covering 40 unique ICD-O histology terms without duplicates.
+

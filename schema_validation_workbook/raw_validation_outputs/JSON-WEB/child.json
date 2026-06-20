@@ -1,0 +1,95 @@
+{
+  "coverage": {
+    "typicalAgeRangeMax": 18,
+    "typicalAgeRangeMin": 0
+  },
+  "datasetFilters": [
+    {
+      "category": "icdOTopography",
+      "description": "",
+      "id": "0_0_0_16",
+      "label": "C77 Lymph nodes",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "C77 Lymph nodes",
+      "description": "",
+      "id": "0_0_0_16_7",
+      "label": "C77.9 Lymph node, nos",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "icdOHistology",
+      "description": "",
+      "id": "0_0_1_40",
+      "label": "959-972 Hodgkin and non-Hodgkin lymphomas",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "959-972 Hodgkin and non-Hodgkin lymphomas",
+      "description": "",
+      "id": "0_0_1_40_48",
+      "label": "9724/3 Systemic EBV positive T-cell lymphoproliferative disease of childhood",
+      "primaryGroup": "cancer-type"
+    },
+    {
+      "category": "crukTerms",
+      "description": "",
+      "id": "0_0_2_87",
+      "isGenerated": true,
+      "label": "Secondary cancer",
+      "primaryGroup": "cancer-type"
+    }
+  ],
+  "icons": [],
+  "mapping_output": {
+    "age_range_max": 18,
+    "childhood_case_detected": true,
+    "encountered_problems": [],
+    "existing_cruk_labels": [
+      "Children's cancers"
+    ],
+    "histology_label": "9724/3 Systemic EBV positive T-cell lymphoproliferative disease of childhood",
+    "male_case_detected": false,
+    "results": [
+      {
+        "CRUK": [
+          {
+            "category": "crukTerms",
+            "description": "",
+            "id": "0_0_2_87",
+            "label": "Secondary cancer",
+            "primaryGroup": "cancer-type"
+          }
+        ],
+        "TCGA": [],
+        "histology_label": "9724/3 Systemic EBV positive T-cell lymphoproliferative disease of childhood",
+        "input_term": {
+          "category": "icdOTopography",
+          "description": "",
+          "id": "0_0_0_16_7",
+          "label": "C77.9 Lymph node, nos",
+          "primaryGroup": "cancer-type"
+        },
+        "matched_level": "simple",
+        "matched_rule": null,
+        "matched_schema_term": "C77.9 Lymph node, nos",
+        "topography_label": "C77.9 Lymph node, nos"
+      }
+    ],
+    "topography_labels": [
+      "C77.9 Lymph node, nos"
+    ],
+    "unmatched": []
+  },
+  "modified": "2026-06-20T20:19:02.931Z",
+  "summary": {
+    "datasetAliases": null,
+    "doiName": null,
+    "keywords": [
+      "men",
+      ""
+    ],
+    "populationSize": 0
+  }
+}
